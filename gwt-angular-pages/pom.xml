@@ -39,10 +39,6 @@
       <artifactId>gwt-user</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.google.gwt</groupId>
-      <artifactId>gwt-dev</artifactId>
-    </dependency>
-    <dependency>
       <groupId>com.asayama.gwt.angular</groupId>
       <artifactId>gwt-angular-ngRoute</artifactId>
     </dependency>
