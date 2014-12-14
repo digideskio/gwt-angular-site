@@ -19,4 +19,7 @@ public interface ProjectConstants extends Constants {
     public String githubTreeUrl();
     
     public String sonatypeSearchUrl();
+    
+    public String gwtVersion();
+    public String gwtAngularVersion();
 }

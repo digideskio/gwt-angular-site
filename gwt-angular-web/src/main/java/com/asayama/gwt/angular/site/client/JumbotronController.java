@@ -13,6 +13,8 @@ public class JumbotronController implements Controller {
     public static final String LEARN_MORE = JumbotronConstants.INSTANCE.learnMore();
     public static final String MORE = JumbotronConstants.INSTANCE.more();
     public static final String ANGULAR_VERSION = Angular.getVersion().getFull();
+    public static final String GWT_VERSION = ProjectConstants.INSTANCE.gwtVersion();
+    public static final String GWT_ANGULAR_VERSION = ProjectConstants.INSTANCE.gwtAngularVersion();
     
     @Override
     public void onControllerLoad() {
