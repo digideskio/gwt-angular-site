@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module>
-  <inherits name="com.asayama.gwt.angular.archetype.MyModule" />
-  <source path="client" />
-  <entry-point class="com.asayama.gwt.angular.archetype.client.MyEntryPoint" />
-</module>

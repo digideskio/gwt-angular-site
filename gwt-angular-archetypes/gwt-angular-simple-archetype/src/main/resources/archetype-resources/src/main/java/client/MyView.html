@@ -1,9 +1,0 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-<div data-ng-controller="${package}.client.MyController">
-  <h2>{{ GREETING }}, {{ getName()||STRANGER }}!</h2>
-  <label for="nameInput">Enter Name: </label>
-  <input type="text" id="nameInput" data-ng-model="name"
-    data-ng-change="setName(name||null)" data-ng-init="name = getName()" />
-</div>
