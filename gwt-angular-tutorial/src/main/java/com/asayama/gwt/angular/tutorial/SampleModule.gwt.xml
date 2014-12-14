@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+  <!-- GWT Modules used in this Tutorial -->
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.i18n.I18N" />
+  <inherits name="com.google.gwt.resources.Resources" />
+  
+  <!-- GWT Angular Modules used in this tutorial -->
+  <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.route.NGRoute" />
+
+  <!-- GWT code organization and this module initializer -->
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.tutorial.client.SampleModule" />
+</module>

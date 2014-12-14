@@ -1,0 +1,6 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.TextInputExampleController">
+  <h2>{{ GREETING }}, {{ getName()||STRANGER }}!</h2>
+  <label for="nameInput">Enter Name: </label>
+  <input type="text" id="nameInput" data-ng-model="name"
+    data-ng-change="setName(name||null)" data-ng-init="name = getName()" />
+</div>

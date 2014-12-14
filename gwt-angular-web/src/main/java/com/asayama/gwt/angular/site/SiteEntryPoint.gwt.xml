@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="site">
+
+  <!-- GWT -->
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.i18n.I18N" />
+
+  <!-- Angular Native Modules -->
+  <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.route.NGRoute" />
+
+  <!-- Extended Angular Modules -->
+  <inherits name="com.asayama.gwt.angular.resources.Resources" />
+  <inherits name="com.asayama.gwt.angular.http.HTTP" />
+  <inherits name="com.asayama.gwt.angular.prettify.Prettify" />
+
+  <!-- Internal Dependency -->
+  <inherits name="com.asayama.gwt.angular.site.pages.Pages" />
+  <inherits name="com.asayama.gwt.angular.site.examples.Examples" />
+  <inherits name="com.asayama.gwt.angular.site.tutorial.Tutorial" />
+
+  <!-- Bootstrap -->
+  <inherits name="com.asayama.gwt.bootstrap.Bootstrap" />
+  <inherits name="com.asayama.gwt.bootstrap.BootstrapTheme" />
+
+  <!-- Project Structure -->
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.site.client.SiteEntryPoint" />
+
+</module>

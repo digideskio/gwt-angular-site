@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <inherits name="com.asayama.gwt.angular.user.theme.clean.Clean" />
+  <inherits name="com.asayama.gwt.angular.user.User" />
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.site.examples.client.GwtWidgetsExample" />
+</module>

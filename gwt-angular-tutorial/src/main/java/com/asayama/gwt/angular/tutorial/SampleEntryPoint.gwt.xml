@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="sample">
+  <inherits name="com.asayama.gwt.angular.tutorial.SampleModule" />
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.tutorial.client.SampleEntryPoint" />
+</module>

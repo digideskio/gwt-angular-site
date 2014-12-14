@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.asayama.docs.gwt.angular.examples</groupId>
+  <artifactId>gwt-angular-examples</artifactId>
+  <packaging>pom</packaging>
+  <parent>
+    <groupId>com.asayama.docs.gwt.angular</groupId>
+    <artifactId>gwt-angular-site</artifactId>
+    <version>0.1.0</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <name>gwt-angular-examples</name>
+  <description>
+    Parent project for GWT Angular examples.
+  </description>
+
+  <modules>
+    <module>CustomDirective</module>
+    <module>CustomFilter</module>
+    <module>GwtWidgets</module>
+    <module>HttpClient</module>
+    <module>ImageResource</module>
+    <module>OnClickEvent</module>
+    <module>Prettify</module>
+    <module>Promise</module>
+    <module>TextInput</module>
+    <module>UrlHashParameter</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.asayama.gwt.angular</groupId>
+      <artifactId>gwt-angular-ngRoute</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.asayama.gwt.angular</groupId>
+      <artifactId>gwt-angular-ngSanitize</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

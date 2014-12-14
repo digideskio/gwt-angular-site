@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<?php
+$fragment = $_REQUEST['_escaped_fragment_'];
+if (isset($fragment)) {
+    $pos = strpos($fragment, '?');
+    if ($pos) {
+        $fragment = substr($fragment, 0, $pos);
+    }
+    $fragment = preg_replace('/^a-zA-Z0-9_\//', '', $fragment);
+    $snapshot = 'snapshots' . $fragment . '.html';
+    echo '<!-- GWT Angular welcomes robots! ('.$snapshot.') --'.chr(62)."\n";
+    include $snapshot;
+    die();
+}
+?>
+<html lang="en">
+<head>
+<title>GWT Angular</title>
+<meta name="fragment" content="!">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="favicon.ico" />
+<style>
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px !important;
+  padding-bottom: 20px !important;
+}
+pre.prettyprint {
+  font-size: 12px !important;
+}
+.jumbotron p {
+  font-size: 16px !important;
+}
+</style>
+</head>
+<body data-ng-controller="com.asayama.gwt.angular.site.client.NavbarController">
+  <div data-ng-include="NAVBAR_HTML"></div>
+  <!--[if lte IE 8]>
+  <div class="panel panel-danger" style="margin: 0;">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-warning-sign"></span>
+      <b>WARNING</b>: Internet Explorer 8 and below are not supported.
+      <a href="ie8.html">Why is IE8 not supported?</a>
+    </div>
+  </div>
+  <![endif]-->
+  <div data-ng-view></div>
+  <hr style="margin-top:4em;">
+  <div class="container" data-ng-include="FOOTER_HTML"></div>
+  <script src="site.nocache.js"></script>
+  <?php include_once('analytics.php'); ?>
+</body>
+</html>

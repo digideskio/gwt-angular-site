@@ -1,0 +1,118 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.CustomDirectiveExampleResources">
+  <p>
+    GWT Angular wraps AngularJS's mechanism for defining directives, so that the
+    directives can be defined in Java language. We demonstrate this feature
+    with a simple "hello" directive, which prints out a text "Hello, World!" to
+    the screen.
+  </p>
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+  </div>
+  
+  <h2>View</h2>
+  <p>
+    In order to print the above code, here is the HTML mark-up that was used.
+    The important bit, of course, is the inner <code>&lt;DIV&gt;</code> with
+    the directive <code>data-my-hello</code>. If you are familiar with 
+    AngularJS, or you have been following the other examples for GWT Angular,
+    you must be familiar by now that all AngularJS directives start with
+    <code>data-ng-*</code>. The directive shown here, however, has the prefix
+    of <code>data-ng-my-*</code>.
+  </p>
+  <pre data-gwt-prettify="view"></pre>
+
+  <h2>Directive</h2>
+  <p>
+    Let's take a look at the Java code that was written to support this 
+    directive.
+  </p>
+  <pre data-gwt-prettify="directive"></pre>
+  <p>
+    In order to define a custom directive, you must implement GWT Angular's
+    <code>Directive</code> interface, for which there is a convenient abstract
+    class <code>AbstractDirective</code> that you can extend if you do not wish
+    to configure every aspect of your directive and only focus on the bits that
+    you care about. In this example, we will only implement the method <code>
+    getTemplate()</code> which returns an HTML fragment of type <code>
+    TextResource</code> that is automatically inserted into the view when the 
+    directive is evaluated. 
+  </p><p>
+    Instead of hard-coding the HTML mark-up into the Java code, <code>
+    ClientBundle</code> allows us to separate the mark-up language into its
+    own file, outside of Java code. This will make much cleaner and maintainable
+    code if and when the complexity of the template used for the directive
+    increases.
+  </p>
+  
+  <h2>Template</h2>
+  <pre data-gwt-prettify="template"></pre>
+  <p>
+    The template HTML for this example is shown above. This is the content of
+    <code>MyHello.html</code> that was bound to the Java code via <code>
+    MyHelloResource</code> interface's <code>template()</code> method.
+  </p><p>
+    There is one variable that is being evaluated in this template, 
+    <code>myHello</code>. This variable is automatically configured by the
+    GWT Angular. GWT Angular (unlike AngularJS) automatically assigns the value
+    of the directive, in this example, the returned value from the <code>
+    getName()</code> method of <code>CustomDirectiveExampleController</code>,
+    to a variable of the same name as the directive.
+  </p>
+  
+  <h2>Controller</h2>
+  <pre data-gwt-prettify="controller"></pre>
+
+  <h2>Module</h2>
+  <p>
+    Of course, both the directive and controller code must be registered with an
+    Angular module, e.g.
+  </p>
+  <pre data-gwt-prettify="module"></pre>
+  <p>
+    We need to clarify what we mean by the "name of the directive." In the view
+    code, we used the directive <code>data-my-hello</code>, but inside the 
+    template, we used the Angular variable <code>myHello</code>, which we said,
+    was the same name as the directive. Further more, the name of the Java
+    class implementing the directive is named <code>MyHello.java</code>.
+  </p><p>
+    This all derives from the AngularJS's directive naming practice. AngularJS
+    dictates that the "name" of a directive should be camelCase, such that 
+    every word-break is capitalized and the first letter must be lower case.
+    So, GWT Angular takes the simple name of the Java class, e.g. <code>
+    MyHello</code>, which almost fits this rule, and converts the first letter
+    to the lower case to derive the name, <code>myHello</code> automatically.
+    The user can use the directive in the HTML with dash-delimited version of 
+    the same name. In this case, <code>my-hello</code>. The reason we use <code>
+    data-my-hello</code> is so that the HTML editors do not flag them as invalid
+    attributes. The expressions <code>my-hello</code> and <code>data-my-hello
+    </code> are equivalent at runtime.
+  </p><p>
+    Of course, if we did not like the name GWT Angular assigns you directive,
+    you can override it by explicitly passing the name of the directive at the
+    time you register the component to your module. 
+  </p>
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="config"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+  &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/CustomDirective">
+      {{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/CustomDirective</a>
+  </p>
+
+</div>

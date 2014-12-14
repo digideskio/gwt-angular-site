@@ -1,0 +1,59 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.tutorial.client.IntroductionController">
+  <p>
+    GWT Angular brings the powerful MVC framework of AngularJS to the Java
+    developers. By using GWT Angular, the user can take advantage of the 
+    build-time optimization of GWT together with the runtime efficiency of 
+    AngularJS.
+  </p><p>
+    In this tutorial, we will create a simple client-only application, using
+    GWT Angular. The application will be <i>client-only</i>, meaning that even
+    though the application is written in Java language, there is no server-side
+    component in the final output. The resulting application can be deployed
+    to a web server, such as <a href="http://projects.apache.org/projects/http_server.html">
+    Apache HTTP Server</a>. Because the output of GWT is a set of JavaScripts, 
+    HTML, and other static resources, the entier application will run in the end
+    user's browser. You will not need any JVM to run the final compiled output 
+    of this application (though you will need one to do the development, if you
+    decide to follow through the steps).
+  </p><p>
+    The entire tutorial code is available at
+  </p><p style="padding-left:40px;">
+    <a href="{{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-tutorial">
+      {{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-tutorial
+    </a>
+  </p><p>
+    A live demo of the tutorial application is shown below in a panel.
+  </p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Sample Application
+    </div>
+    <div class="panel-body" data-ng-include="DEMO_URL"
+      data-ng-controller="com.asayama.gwt.angular.tutorial.client.SampleController">
+    </div>
+  </div>  
+  <p>
+    Basic knowledge of Java and GWT is assumed. If you are not familiar with
+    Java, <a href="http://docs.oracle.com/javase/tutorial/java/">The Java Tutorials</a>
+    is a good place to start. If you are not familiar with GWT, then please go
+    over <a href="http://www.gwtproject.org/doc/latest/tutorial/">GWT Tutorial</a>
+    before attempting to follow this tutorial.
+  </p><p>
+    If you have never worked with AngularJS, that should not preclude you from
+    being able to follow this tutorial. However, you should at be familiar with
+    basic HTML and JavaScript programming concepts, as well as well known design
+    patterns, such as Model View Control. I have found <a href="http://www.w3schools.com/">
+    w3schools</a> an excellent source of HTML and JavaScript programming, and
+    at minimum you can skim through the Wiki page on <a href="http://en.wikipedia.org/wiki/AngularJS">
+    AngularJS</a> before you start.
+  </p><p>
+    In this tutorial, we will use Apache Maven to manage the project dependency,
+    and use Eclipse for IDE. Strictly speaking, these things are not necessary,
+    but if you plan to follow along the steps in tutorial, you may want to 
+    install and configure these tools as well.
+  </p><p>
+    You can find information about Maven at <a href="http://maven.apache.org/">
+    Apache Maven</a> website, and you can learn about Eclipse at the <a
+    href="https://www.eclipse.org/">Eclipese Foundation</a> website.
+  </p>
+</div>

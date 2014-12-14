@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="demo">
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.route.NGRoute" />
+  <inherits name="com.asayama.gwt.angular.resources.Resources" />
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.site.pages.client.Pages" />
+</module>

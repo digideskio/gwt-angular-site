@@ -1,0 +1,78 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.GwtWidgetsExampleResources">
+  <p>
+    GWT Angular's one of primary objectives is to bring AngularJS's MVC 
+    framework to Java developers, in a way that is natural for Java developers.
+    Most Java developers may not be familiar with building the user interface
+    in HTML, where GWT can fill the gap by providing a number of basic but 
+    useful UI widgets, ready to use in Java code. GWT Angular strives to 
+    support the use of GWT UI widgets inside of Angular powered HTML, so that
+    the users can start developing the user interface with minimal HTML 
+    knowledge and Angular directives.
+  </p><p>
+    In this paradigm, HTML is seen more as a way to declare the layout of the
+    pages, while the GWT is seen as a way to provide the basic building blocks
+    of user interfaces. AngularJS is used to assemble these pages (or "screens")
+    in to a coherent application via GWT Angular.
+  </p><p>
+    The below example shows a couple of GWT UI widgets shown in their 
+    <a href="http://www.gwtproject.org/doc/latest/RefWidgetGallery.html">
+    gallery</a>.
+  </p>
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+  </div>
+  
+  <h2>View</h2>
+  <p>
+    GWT Button example demonstrates how GWT's <code>Button</code> object can be
+    inserted into the view HTML via <code>data-gwt-widget</code> directive
+    provided by GWT Angular. Similarly, GWT's <code>DatePicker</code> object
+    is inserted into the same HTML using the same directive. In this example,
+    we do not use GWT's layout mechanism, but we use HTML to control the
+    layout.
+  </p>
+  <pre data-gwt-prettify="view"></pre>
+  
+  <h2>Controller</h2>
+  <p>
+    The HTML view obtain the reference to the GWT UI widgets via <code>
+    getButton()</code> and <code>getDatePicker()</code> methods defined in its
+    controller. The underlying widget objects are contructed by the Contrller
+    via <code>createButton()</code> and <code>createDatePicker()</code>
+    methods upon controller load time.
+  </p><p>
+    As you can see, unlike other, more Angular centric examples where event
+    callbacks from the UI is sent to the controller, the handler of these events
+    are directly attached to the GWT UI widgets.
+  </p><p>
+    In this example, when the user takes any actions on the GWT Button or the
+    Date Picker, the events are delegated to the controller's <code>shout()</code>
+    method, which displays GWT <code>DialogBox</code> object. The definition
+    of the object is shown as <code>GwtWidgetDemoDialogBox</code>.
+  </p>
+  <pre data-gwt-prettify="controller"></pre>
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="config"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-user&lt;/artifactId&gt;
+  &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/GwtWidgets">
+      {{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/GwtWidgets</a>
+  </p>
+
+</div>

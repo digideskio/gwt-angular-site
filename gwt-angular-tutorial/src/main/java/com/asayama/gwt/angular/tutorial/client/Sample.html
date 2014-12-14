@@ -1,0 +1,20 @@
+<h1>GWT Angular Tutorial</h1>
+<div>
+  <label for="quickEntryInput">Quick Entry</label>
+  <input type="text" id="quickEntryInput" style="width:280px;" 
+    data-ng-model="quickEntryInputValue"
+    data-ng-keypress="quickEntryInputValue = onKeyPressQuickEntry($event)"
+    data-ng-change="onChangeQuickEntry(quickEntryInputValue)">
+  <div data-ng-switch="getEntries().length">
+    <h3 data-ng-switch-when="0">My List is empty</h3>
+    <h3 data-ng-switch-when="1">
+      My List has {{ getEntries().length }} item
+      <small><a data-ng-click="onClickClear()">clear</a></small>
+    </h3>
+    <h3 data-ng-switch-default>
+      My List has {{ getEntries().length }} items
+      <small><a data-ng-click="onClickClear()">clear</a></small>
+    </h3>
+  </div>
+  <p data-ng-repeat="entry in getEntries() | orderBy:'caption'">{{ entry.caption }}</p>
+</div>

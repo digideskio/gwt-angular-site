@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.i18n.I18N" />
+  <inherits name="com.asayama.gwt.resources.Resources" />
+  <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.route.NGRoute" />
+  <inherits name="com.asayama.gwt.angular.sanitize.NGSanitize" />
+  <inherits name="com.asayama.gwt.angular.resources.Resources" />
+  <inherits name="com.asayama.gwt.angular.prettify.Prettify" />
+  <inherits name="com.asayama.gwt.angular.site.pages.Pages" />
+  <inherits name="com.asayama.gwt.angular.tutorial.SampleModule" />
+
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.site.tutorial.client.Tutorial" />
+
+</module>

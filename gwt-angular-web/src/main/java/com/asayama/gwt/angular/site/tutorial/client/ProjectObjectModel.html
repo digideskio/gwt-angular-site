@@ -1,0 +1,61 @@
+<div>
+  <p>
+    "Project Object Model" is a fancy name for a Maven project descriptor. Most
+    people refer to this as "pom," and its filename is <code>pom.xml</code>.
+    Among many other things, it declares the project's depenency. For this
+    tutorial project, we have two notable dependencies.
+  </p><p>
+    <code>com.asayama.gwt:gwt-angular-ng</code> project refers to the core API 
+    for <a href="http://kyoken74.github.io/gwt-angular/">GWT Angular</a>. It 
+    provides the GWT wrapper around AngularJS's "ng" module.
+  </p><p>
+    <code>com.asayama.gwt:gwt-angular-ngRoute</code> provides the GWT wrapper 
+    around AngularJS's "ngRoute" module.
+  </p>
+  <pre class="prettyprint">
+&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+    &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+    &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+    &lt;artifactId&gt;gwt-angular-ngRoute&lt;/artifactId&gt;
+    &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;</pre>
+  <p>
+    In order to compile Java code into JavaScript, we must invoke GWT compiler
+    at the time of the build. We can do this by adding the plugin, <code>
+    gwt-maven-plugin</code> to our POM.
+  </p><p>
+    In this example, we specify <code>com.asayama.gwt.angular.tutorial.SampleEntryPoint</code>
+    as the compile target GWT module. This module declaration references the file
+    <code>src/main/java/com/asayama/gwt/angular/tutorial/SampleEntryPoint.gwt.xml</code>
+    file in the project.
+  </p>
+  <pre class="prettyprint">
+&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-maven-plugin&lt;/artifactId&gt;
+  &lt;version&gt;2.5.1&lt;/version&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;configuration&gt;
+        &lt;module&gt;com.asayama.gwt.angular.tutorial.SampleEntryPoint&lt;/module&gt;
+      &lt;/configuration&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;compile&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
+
+  <p>
+    View the full <a href="{{ GITHUB_BLOB_URL }}/gwt-angular-site/gwt-angular-tutorial/pom.xml">pom.xml</a>
+  </p>
+  
+</div>

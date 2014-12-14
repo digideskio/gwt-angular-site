@@ -1,0 +1,66 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.TextInputExampleResources">
+  <p>
+    This example demonstrates the declaration of Angular model and the 
+    communication between the view (HTML) and the controller (Java) using this
+    model.
+  </p><p>
+    To see this example in action, try typing in something into the text field
+    below. Before you enter any values into the field, the caption above the
+    field should read "<b>Hello, Stranger!</b>" Once you enter a value in the 
+    field, e.g. "Jack", then you will see that caption updated to 
+    "<b>Hello, Jack!</b>" as you type in the value.
+  </p>
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+  </div>
+
+  <h2>View</h2>
+  <p>
+    The text <code>&lt;INPUT&gt;</code> field is associated with an Angular 
+    model called <code>name</code> using <code>data-ng-model</code> directive.
+    When the element is first rendered, the controller's <code>getName()</code>
+    is called and the value from this method is  assigned to the model. When the
+    value of the input box is changed, the change is communicated to the 
+    controller via <code>data-ng-change</code> directive, which calls 
+    <code>setName()</code> method.
+  </p>
+  <pre data-gwt-prettify="view"></pre>
+
+  <h2>Controller</h2>
+  <p>
+    The controller code bound to the view above is shown below. The view 
+    communicates with the controller via the <code>getName()</code> and 
+    <code>setName()</code> methods.
+  </p><p>
+    There are two other variables that are defined in this controller that 
+    are bound to the view. They are <code>GREETING</code> and <code>STRANGER
+    </code>. You may recognize these variables from the HTML code above.
+    These public final constants are bound to the view, so that they can be
+    inserted into the view via the use of double mustache notation, {{ }}.
+  </p>
+  <pre data-gwt-prettify="controller"></pre>
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="config"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+  &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/TextInput">
+      {{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/TextInput</a>
+  </p>
+
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.site.pages.Pages" />
+  <inherits name="com.asayama.gwt.angular.site.examples.CustomDirectiveExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.CustomFilterExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.GwtWidgetsExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.HttpClientExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.ImageResourceExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.OnClickEventExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.PrettifyExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.PromiseExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.TextInputExample" />
+  <inherits name="com.asayama.gwt.angular.site.examples.UrlHashParameterExample" />
+
+  <source path="client" />
+  <entry-point class="com.asayama.gwt.angular.site.examples.client.Examples" />
+</module>

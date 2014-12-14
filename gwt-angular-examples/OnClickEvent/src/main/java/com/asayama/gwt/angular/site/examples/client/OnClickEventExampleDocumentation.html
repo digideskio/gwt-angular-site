@@ -1,0 +1,64 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.OnClickEventExampleResources">
+  <p>
+    In this example, we demonstrate how we capture <code>onClick</code> event
+    using GWT Angular. <code>data-ng-click</code> directive is used to pass
+    events to the controller. The controller modifies it state, which is 
+    automatically reflected in the view. In this case, <code>getCaption()</code>.
+  </p><p>
+    Click the label, "<b>Click Me</b>". You will see that the caption below
+    the label is automatically refreshed.
+  </p>
+  
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+  </div>
+  
+  <h2>View</h2>
+  <p>
+    The directive <code>data-ng-click</code> binds the browser's onClick event
+    to the controller's <code>onClickTitle()</code> method. <code>$event</code>
+    represents the browser's event object. The value of the <code>TITLE</code>
+    and the value returned by <code>getCaption()</code> method are inserted into
+    the <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> mark-ups.
+  </p>
+  <pre data-gwt-prettify="view"></pre>
+
+  <h2>Controller</h2>
+  <p>
+    Even though the view passes the browser's event to the controller, in this
+    implementation, <code>onClickTitle()</code> method ignores this value. In a
+    real application, you may choose to do something more interesting with the
+    event object.
+  </p><p>
+    When the browser's event is issued, we capture the current timestamp by
+    creating a <code>Date</code> object in Java, and then assigning the string
+    to the <code>caption</code> variable, which acts as the model. Since the
+    view is bound to <code>getCaption()</code>, as soon as the model's value
+    is modified, the change is reflected on the screen.
+  </p>
+  <pre data-gwt-prettify="controller"></pre>
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="config"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+  &lt;version&gt;{{ PROJECT_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/OnClickEvent">
+      {{ GITHUB_SOURCE_URL }}/gwt-angular-site/gwt-angular-examples/OnClickEvent</a>
+  </p>
+
+</div>

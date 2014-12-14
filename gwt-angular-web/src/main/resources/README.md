@@ -1,0 +1,3 @@
+This directory contains static resources that are part of the final artifact of this project.
+
+Unlike the `src/main/java/**/public` directories of GWT modules, the contents of this directory are "filtered" by Maven for variable substitution at build time. Any static resources that are needed by GWT, which should not be filtered by Maven should be maintained in the `public` folders in the Java source tree.
