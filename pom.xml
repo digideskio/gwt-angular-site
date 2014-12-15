@@ -50,10 +50,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!--
-    <timestamp.yyyymmdd>${maven.build.timestamp}</timestamp.yyyymmdd>
-    <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-    -->
     <gwt.version>2.6.1</gwt.version>
     <velocity.version>1.7</velocity.version>
     <gwt-binding.version>0.1.0</gwt-binding.version>

@@ -18,18 +18,12 @@ public class NavbarController implements Controller {
     public static final String NAVBAR_HTML = NavbarResources.INSTANCE.navbar().getSafeUri().asString();
     public static final String FOOTER_HTML = NavbarResources.INSTANCE.footer().getSafeUri().asString();
 
-    public static final String PROJECT_GROUP_ID = ProjectConstants.INSTANCE.projectGroupId();
-    public static final String PROJECT_ARTIFACT_ID = ProjectConstants.INSTANCE.projectArtifactId();
-    public static final String PROJECT_VERSION = ProjectConstants.INSTANCE.projectVersion();
-    public static final String PROJECT_URL = ProjectConstants.INSTANCE.projectUrl();
-    
-    @Deprecated
-    public static final String GITHUB_SOURCE_URL = ProjectConstants.INSTANCE.githubTreeUrl();
-    public static final String GITHUB_ARCHIVE_URL = ProjectConstants.INSTANCE.githubArchiveUrl();
-    public static final String GITHUB_BLOB_URL = ProjectConstants.INSTANCE.githubBlobUrl();
-    public static final String GITHUB_ISSUE_URL = ProjectConstants.INSTANCE.githubIssueUrl();
-    public static final String GITHUB_TREE_URL = ProjectConstants.INSTANCE.githubTreeUrl();
-    public static final String SONATYPE_SEARCH_URL = ProjectConstants.INSTANCE.sonatypeSearchUrl();
+    public static final String SONATYPE_URL = ProjectConstants.INSTANCE.sonatypeUrl();
+    public static final String GWT_VERSION = ProjectConstants.INSTANCE.gwtVersion();
+    public static final String GWT_ANGULAR_VERSION = ProjectConstants.INSTANCE.gwtAngularVersion();
+    public static final String GWT_ANGULAR_SITE_VERSION = ProjectConstants.INSTANCE.gwtAngularSiteVersion();
+    public static final String GITHUB_GWT_ANGULAR_URL = ProjectConstants.INSTANCE.githubGwtAngularUrl();
+    public static final String GITHUB_GWT_ANGULAR_SITE_URL = ProjectConstants.INSTANCE.githubGwtAngularSiteUrl();
     
     public static final String DEVELOP = NavbarConstants.INSTANCE.develop();
     public static final String DOCUMENTATION = NavbarConstants.INSTANCE.documentation();
