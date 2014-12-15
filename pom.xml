@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.asayama.docs.gwt.angular</groupId>
   <artifactId>gwt-angular-site</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>pom</packaging>
 
   <name>gwt-angular-site</name>
@@ -38,7 +38,7 @@
     <connection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</connection>
     <url>scm:git:git@github.com:kyoken74/gwt-angular-site.git</url>
     <developerConnection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</developerConnection>
-    <tag>0.1.0</tag>
+    <tag>0.1.1</tag>
   </scm>
   <developers>
     <developer>
@@ -50,10 +50,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!--
-    <timestamp.yyyymmdd>${maven.build.timestamp}</timestamp.yyyymmdd>
-    <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-    -->
     <gwt.version>2.6.1</gwt.version>
     <velocity.version>1.7</velocity.version>
     <gwt-binding.version>0.1.0</gwt-binding.version>

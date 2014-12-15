@@ -7,22 +7,24 @@
   <parent>
     <groupId>com.asayama.docs.gwt.angular</groupId>
     <artifactId>gwt-angular-site</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <relativePath>..</relativePath>
   </parent>
 
   <name>gwt-angular-web</name>
   <description>
-    Provides the demo website for GWT Angular project.
+    Provides the live demo web site for GWT Angular project. GWT Angular is a
+    GWT wrapper around AngularJS framework, so that the powerful MVC framework
+    of AngularJS can be used by Java programmers. The site itself is written
+    using GWT Angular. If anyone wishes to learn how to write a site using GWT
+    Angular, and wishes to see a working example, this project may serve as a
+    reference implementation.
   </description>
-  <url>http://kyoken74.github.io/gwt-angular</url>
+  <url>http://gwt-angular.asayama.com</url>
 
   <properties>
-    <github.archive.url>https://github.com/kyoken74/gwt-angular/archive/${project.version}</github.archive.url>
-    <github.blob.url>http://github.com/kyoken74/gwt-angular/blob/${project.version}</github.blob.url>
-  	<github.issue.url>https://github.com/kyoken74/gwt-angular/issues</github.issue.url>
-    <github.tree.url>http://github.com/kyoken74/gwt-angular/tree/${project.version}</github.tree.url>
-    <sonatype.search.url>https://oss.sonatype.org/#nexus-search;quick~gwt-angular</sonatype.search.url>
+    <github.url>https://github.com/kyoken74</github.url>
+    <sonatype.url>https://oss.sonatype.org</sonatype.url>
   </properties>
 
   <build>
@@ -82,61 +84,61 @@
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>CustomDirective</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>CustomFilter</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>GwtWidgets</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>HttpClient</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>ImageResource</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>OnClickEvent</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>Prettify</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>Promise</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>TextInput</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>UrlHashParameter</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
       <scope>provided</scope>
     </dependency>
 
