@@ -10,8 +10,9 @@ public interface ProjectConstants extends Constants {
 
     public String githubGwtAngularUrl();
     public String githubGwtAngularSiteUrl();
+    public String githubGwtAngularExamplesUrl();
     public String sonatypeUrl();
     public String gwtVersion();
     public String gwtAngularVersion();
-    public String gwtAngularSiteVersion();    
+    public String gwtAngularSiteVersion();
 }

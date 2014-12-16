@@ -24,6 +24,7 @@ public class NavbarController implements Controller {
     public static final String GWT_ANGULAR_SITE_VERSION = ProjectConstants.INSTANCE.gwtAngularSiteVersion();
     public static final String GITHUB_GWT_ANGULAR_URL = ProjectConstants.INSTANCE.githubGwtAngularUrl();
     public static final String GITHUB_GWT_ANGULAR_SITE_URL = ProjectConstants.INSTANCE.githubGwtAngularSiteUrl();
+    public static final String GITHUB_GWT_ANGULAR_EXAMPLES_URL = ProjectConstants.INSTANCE.githubGwtAngularExamplesUrl();
     
     public static final String DEVELOP = NavbarConstants.INSTANCE.develop();
     public static final String DOCUMENTATION = NavbarConstants.INSTANCE.documentation();
