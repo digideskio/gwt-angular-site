@@ -9,8 +9,9 @@ public interface ProjectConstants extends Constants {
     public static final ProjectConstants INSTANCE = GWT.create(ProjectConstants.class);
 
     public String githubGwtAngularUrl();
-    public String githubGwtAngularSiteUrl();
     public String githubGwtAngularExamplesUrl();
+    public String githubGwtAngularTutorialUrl();
+    public String githubGwtAngularSiteUrl();
     public String sonatypeUrl();
     public String gwtVersion();
     public String gwtAngularVersion();
