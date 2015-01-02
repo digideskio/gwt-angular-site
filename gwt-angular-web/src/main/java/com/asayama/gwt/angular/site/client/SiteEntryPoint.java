@@ -6,6 +6,8 @@ import java.util.logging.Logger;
 import com.asayama.gwt.angular.client.AbstractModule;
 import com.asayama.gwt.angular.client.Angular;
 import com.asayama.gwt.angular.client.Configurator;
+import com.asayama.gwt.angular.client.Injector;
+import com.asayama.gwt.angular.client.NGScope;
 import com.asayama.gwt.angular.client.location.LocationProvider;
 import com.asayama.gwt.angular.client.sce.SceProvider;
 import com.asayama.gwt.angular.route.client.RouteProvider;
@@ -15,6 +17,9 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
 public class SiteEntryPoint extends AbstractModule implements EntryPoint {
+    
+    public static final String CLASS = SiteEntryPoint.class.getName();
+    public static final Logger LOG = Logger.getLogger(CLASS);
 
     static {
         SimpleLogFormatter formatter = new SimpleLogFormatter();
@@ -27,9 +32,11 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
     public void onModuleLoad() {
         
         Angular.module(this);
+        
         controller(DocumentationController.class);
         controller(DownloadsController.class);
         controller(ExamplesController.class);
+        controller(FooterController.class);
         controller(JumbotronController.class);
         controller(NavbarController.class);
         controller(TutorialController.class);
@@ -44,12 +51,12 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
             @Override
             public void configure(RouteProvider provider) {
                 provider
-                    .when(NavbarResources.INSTANCE.documentation(), DocumentationController.class)
-                    .when(NavbarResources.INSTANCE.downloads(), DownloadsController.class)
-                    .when(NavbarResources.INSTANCE.jumbotron(), JumbotronController.class)
-                    .when(NavbarResources.INSTANCE.examples(), ExamplesController.class)
-                    .when(NavbarResources.INSTANCE.tutorial(), TutorialController.class)
-                    .otherwise(NavbarResources.INSTANCE.jumbotron());
+                    .when(ProjectResources.INSTANCE.documentation(), DocumentationController.class)
+                    .when(ProjectResources.INSTANCE.downloads(), DownloadsController.class)
+                    .when(ProjectResources.INSTANCE.jumbotron(), JumbotronController.class)
+                    .when(ProjectResources.INSTANCE.examples(), ExamplesController.class)
+                    .when(ProjectResources.INSTANCE.tutorial(), TutorialController.class)
+                    .otherwise(ProjectResources.INSTANCE.jumbotron());
             }
         });
         
@@ -69,6 +76,46 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
             }
         });
         
+        run(RootScopeInitializer.class);
+        
         Angular.bootstrap();
+    }
+
+    /**
+     * Registers project scope ($rootScope) constants and resources during 
+     * module initialization.
+     * 
+     * @author kyoken74
+     */
+    public static class RootScopeInitializer implements Runnable {
+        
+        @Injector.Inject("$rootScope")
+        NGScope scope;
+        
+        @Override
+        public void run() {
+            
+            // Project Resources
+            scope.put("LOGO_LARGE", ProjectResources.INSTANCE.logoLarge());
+            scope.put("LOGO_SMALL", ProjectResources.INSTANCE.logoSmall());
+
+            // Project Constants
+            scope.put("ANGULAR_VERSION", Angular.getVersion().getFull());
+            scope.put("GWT_VERSION", ProjectConstants.INSTANCE.gwtVersion());
+            scope.put("GWT_ANGULAR_VERSION", ProjectConstants.INSTANCE.gwtAngularVersion());
+            scope.put("GWT_ANGULAR_SITE_VERSION", ProjectConstants.INSTANCE.gwtAngularSiteVersion());
+            scope.put("GITHUB_GWT_ANGULAR_URL", ProjectConstants.INSTANCE.githubGwtAngularUrl());
+            scope.put("GITHUB_GWT_ANGULAR_EXAMPLES_URL", ProjectConstants.INSTANCE.githubGwtAngularExamplesUrl());
+            scope.put("GITHUB_GWT_ANGULAR_SITE_URL", ProjectConstants.INSTANCE.githubGwtAngularSiteUrl());
+            scope.put("GITHUB_GWT_ANGULAR_TUTORIAL_URL", ProjectConstants.INSTANCE.githubGwtAngularTutorialUrl());
+            scope.put("SONATYPE_URL", ProjectConstants.INSTANCE.sonatypeUrl());
+
+            // Project Constants - Navigation
+            scope.put("DEVELOP", ProjectConstants.INSTANCE.develop());
+            scope.put("DOCUMENTATION", ProjectConstants.INSTANCE.documentation());
+            scope.put("DOWNLOADS", ProjectConstants.INSTANCE.downloads());
+            scope.put("EXAMPLES", ProjectConstants.INSTANCE.examples());
+            scope.put("TUTORIAL", ProjectConstants.INSTANCE.tutorial());
+        }
     }
 }
