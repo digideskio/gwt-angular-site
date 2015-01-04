@@ -198,22 +198,22 @@
       <dependency>
         <groupId>com.asayama.docs.gwt.angular.examples</groupId>
         <artifactId>gwt-angular-examples</artifactId>
-        <version>${project.version}</version>
+        <version>0.1.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-pages</artifactId>
-        <version>${project.version}</version>
+        <version>0.1.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-web</artifactId>
-        <version>${project.version}</version>
+        <version>0.1.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-tutorial</artifactId>
-        <version>${project.version}</version>
+        <version>0.1.2-SNAPSHOT</version>
       </dependency>
       
       <!-- gwt-angular -->
