@@ -8,14 +8,12 @@ import com.google.gwt.resources.client.ImageResource;
 
 public class ProjectStructureController extends AbstractController {
 
-    public static final ImageResource PROJECT_STRUCTURE_IMAGE = ProjectStructureControllerResources.INSTANCE.projectStructureImage();
-    
+    private static ProjectStructureControllerResources RESOURCES = GWT.create(ProjectStructureControllerResources.class);
+    public static final ImageResource PROJECT_STRUCTURE_IMAGE = RESOURCES.projectStructureImage();
 }
 
 interface ProjectStructureControllerResources extends ClientBundle {
 
-    static ProjectStructureControllerResources INSTANCE = GWT.create(ProjectStructureControllerResources.class);
-    
     @Source("ProjectStructure.png")
     public ImageResource projectStructureImage();
 }

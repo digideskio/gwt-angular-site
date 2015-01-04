@@ -6,14 +6,12 @@ import com.google.gwt.i18n.client.Constants;
 
 public class JumbotronController extends AbstractController {
 
-    public static final String LEARN_MORE = JumbotronConstants.INSTANCE.learnMore();
-    public static final String MORE = JumbotronConstants.INSTANCE.more();
-
+    private static final JumbotronConstants CONSTANTS = GWT.create(JumbotronConstants.class);
+    public static final String LEARN_MORE = CONSTANTS.learnMore();
+    public static final String MORE = CONSTANTS.more();
 }
 
 interface JumbotronConstants extends Constants {
-
-    static JumbotronConstants INSTANCE = GWT.create(JumbotronConstants.class);
 
     @DefaultStringValue("Learn more »")
     String learnMore();
