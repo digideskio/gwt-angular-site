@@ -9,19 +9,18 @@ import com.google.gwt.resources.client.TextResource;
 
 public class PrettifyExampleResources extends AbstractController {
 
-    public static final String DEMO_URL = PrettifyExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
-    public static final HtmlResource prettify = PrettifyExampleClientBundle.INSTANCE.prettify();
-    public static final HtmlResource demo = PrettifyExampleClientBundle.INSTANCE.demo();
-    public static final TextResource config = PrettifyExampleClientBundle.INSTANCE.config();
-    public static final TextResource module = PrettifyExampleClientBundle.INSTANCE.module();
-    public static final TextResource controller = PrettifyExampleClientBundle.INSTANCE.controller();
-    public static final TextResource view = PrettifyExampleClientBundle.INSTANCE.view();
-    
+    private static final PrettifyExampleClientBundle RESOURCES = GWT.create(PrettifyExampleClientBundle.class);
+
+    public static final String DEMO_URL = RESOURCES.demo().getSafeUri().asString();
+    public static final HtmlResource prettify = RESOURCES.prettify();
+    public static final HtmlResource demo = RESOURCES.demo();
+    public static final TextResource config = RESOURCES.config();
+    public static final TextResource module = RESOURCES.module();
+    public static final TextResource controller = RESOURCES.controller();
+    public static final TextResource view = RESOURCES.view();
 }
 
 interface PrettifyExampleClientBundle extends ClientBundle {
-
-    static final PrettifyExampleClientBundle INSTANCE = GWT.create(PrettifyExampleClientBundle.class);
 
     @Source("PrettifyExampleDocumentation.html")
     HtmlResource prettify();
@@ -29,8 +28,6 @@ interface PrettifyExampleClientBundle extends ClientBundle {
     @Source("PrettifyExample.html")
     HtmlResource demo();
 
-    // Core Resources
-    
     @Source("com/asayama/gwt/angular/site/examples/PrettifyExample.gwt.xml")
     TextResource config();
     

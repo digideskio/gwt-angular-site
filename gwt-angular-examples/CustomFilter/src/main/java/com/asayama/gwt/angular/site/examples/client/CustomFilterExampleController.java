@@ -25,4 +25,3 @@ public class CustomFilterExampleController extends AbstractController {
         return caption;
     }
 }
-

@@ -9,19 +9,18 @@ import com.google.gwt.resources.client.TextResource;
 
 public class OnClickEventExampleResources extends AbstractController {
 
-    public static final String DEMO_URL = OnClickEventExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
-    public static final HtmlResource onClickEvent = OnClickEventExampleClientBundle.INSTANCE.onClickEvent();
-    public static final HtmlResource demo = OnClickEventExampleClientBundle.INSTANCE.demo();
-    public static final TextResource config = OnClickEventExampleClientBundle.INSTANCE.config();
-    public static final TextResource module = OnClickEventExampleClientBundle.INSTANCE.module();
-    public static final TextResource controller = OnClickEventExampleClientBundle.INSTANCE.controller();
-    public static final TextResource view = OnClickEventExampleClientBundle.INSTANCE.view();
+    private static final OnClickEventExampleClientBundle RESOURCES = GWT.create(OnClickEventExampleClientBundle.class);
 
+    public static final String DEMO_URL = RESOURCES.demo().getSafeUri().asString();
+    public static final HtmlResource onClickEvent = RESOURCES.onClickEvent();
+    public static final HtmlResource demo = RESOURCES.demo();
+    public static final TextResource config = RESOURCES.config();
+    public static final TextResource module = RESOURCES.module();
+    public static final TextResource controller = RESOURCES.controller();
+    public static final TextResource view = RESOURCES.view();
 }
 
 interface OnClickEventExampleClientBundle extends ClientBundle {
-
-    static final OnClickEventExampleClientBundle INSTANCE = GWT.create(OnClickEventExampleClientBundle.class);
 
     @Source("OnClickEventExampleDocumentation.html")
     HtmlResource onClickEvent();
@@ -29,8 +28,6 @@ interface OnClickEventExampleClientBundle extends ClientBundle {
     @Source("OnClickEventExample.html")
     HtmlResource demo();
 
-    // Core Resources
-    
     @Source("com/asayama/gwt/angular/site/examples/OnClickEventExample.gwt.xml")
     TextResource config();
     

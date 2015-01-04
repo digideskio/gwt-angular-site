@@ -9,28 +9,25 @@ import com.google.gwt.resources.client.TextResource;
 
 public class PromiseExampleResources extends AbstractController {
 
-    public static final String DEMO_URL = PromiseExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
-    public static final HtmlResource promise = PromiseExampleClientBundle.INSTANCE.promise();
-    public static final HtmlResource demo = PromiseExampleClientBundle.INSTANCE.demo();
-    public static final TextResource config = PromiseExampleClientBundle.INSTANCE.config();
-    public static final TextResource module = PromiseExampleClientBundle.INSTANCE.module();
-    public static final TextResource controller = PromiseExampleClientBundle.INSTANCE.controller();
-    public static final TextResource view = PromiseExampleClientBundle.INSTANCE.view();
-    public static final TextResource service = PromiseExampleClientBundle.INSTANCE.service();
-    
+    private static final PromiseExampleClientBundle RESOURCES = GWT.create(PromiseExampleClientBundle.class);
+
+    public static final String DEMO_URL = RESOURCES.demo().getSafeUri().asString();
+    public static final HtmlResource promise = RESOURCES.promise();
+    public static final HtmlResource demo = RESOURCES.demo();
+    public static final TextResource config = RESOURCES.config();
+    public static final TextResource module = RESOURCES.module();
+    public static final TextResource controller = RESOURCES.controller();
+    public static final TextResource view = RESOURCES.view();
+    public static final TextResource service = RESOURCES.service();
 }
 
 interface PromiseExampleClientBundle extends ClientBundle {
-
-    static final PromiseExampleClientBundle INSTANCE = GWT.create(PromiseExampleClientBundle.class);
 
     @Source("PromiseExampleDocumentation.html")
     HtmlResource promise();
 
     @Source("PromiseExample.html")
     HtmlResource demo();
-    
-    // Core Resources
     
     @Source("com/asayama/gwt/angular/site/examples/PromiseExample.gwt.xml")
     TextResource config();
@@ -43,8 +40,6 @@ interface PromiseExampleClientBundle extends ClientBundle {
 
     @Source("PromiseExample.html")
     TextResource view();
-    
-    // Other Resources
     
     @Source("service/GreetingService.java")
     TextResource service();

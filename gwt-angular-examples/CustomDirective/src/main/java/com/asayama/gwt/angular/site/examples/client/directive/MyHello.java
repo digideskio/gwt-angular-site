@@ -10,7 +10,8 @@ public class MyHello extends AbstractDirective {
 
     @Override
     public TextResource getTemplate() {
-        return MyHelloResource.INSTANCE.template();
+        MyHelloResource RESOURCES = GWT.create(MyHelloResource.class);
+        return RESOURCES.template();
     }
 
     /**
@@ -28,8 +29,6 @@ public class MyHello extends AbstractDirective {
 }
 
 interface MyHelloResource extends ClientBundle {
-    
-    static final MyHelloResource INSTANCE = GWT.create(MyHelloResource.class);
     
     @Source("MyHello.html")
     TextResource template();

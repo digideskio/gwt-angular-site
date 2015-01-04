@@ -9,28 +9,25 @@ import com.google.gwt.resources.client.TextResource;
 
 public class GwtWidgetsExampleResources extends AbstractController {
 
-    public static final String DEMO_URL = GwtWidgetsExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
-    public static final HtmlResource gwtWidgets = GwtWidgetsExampleClientBundle.INSTANCE.gwtWidgets();
-    public static final HtmlResource demo = GwtWidgetsExampleClientBundle.INSTANCE.demo();
-    public static final TextResource config = GwtWidgetsExampleClientBundle.INSTANCE.config();
-    public static final TextResource module = GwtWidgetsExampleClientBundle.INSTANCE.module();
-    public static final TextResource controller = GwtWidgetsExampleClientBundle.INSTANCE.controller();
-    public static final TextResource view = GwtWidgetsExampleClientBundle.INSTANCE.view();
-
+    private static final GwtWidgetsExampleClientBundle RESOURCES = GWT.create(GwtWidgetsExampleClientBundle.class);
+    
+    public static final String DEMO_URL = RESOURCES.demo().getSafeUri().asString();
+    public static final HtmlResource gwtWidgets = RESOURCES.gwtWidgets();
+    public static final HtmlResource demo = RESOURCES.demo();
+    public static final TextResource config = RESOURCES.config();
+    public static final TextResource module = RESOURCES.module();
+    public static final TextResource controller = RESOURCES.controller();
+    public static final TextResource view = RESOURCES.view();
 }
 
 interface GwtWidgetsExampleClientBundle extends ClientBundle {
 
-    static final GwtWidgetsExampleClientBundle INSTANCE = GWT.create(GwtWidgetsExampleClientBundle.class);
-    
     @Source("GwtWidgetsExampleDocumentation.html")
     HtmlResource gwtWidgets();
 
     @Source("GwtWidgetsExample.html")
     HtmlResource demo();
 
-    // Core Resources
-    
     @Source("com/asayama/gwt/angular/site/examples/GwtWidgetsExample.gwt.xml")
     TextResource config();
     
