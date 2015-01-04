@@ -1,13 +1,13 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.resources.client.HtmlResource;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public class GwtWidgetsExampleResources implements Controller {
+public class GwtWidgetsExampleResources extends AbstractController {
 
     public static final String DEMO_URL = GwtWidgetsExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
     public static final HtmlResource gwtWidgets = GwtWidgetsExampleClientBundle.INSTANCE.gwtWidgets();
@@ -16,10 +16,7 @@ public class GwtWidgetsExampleResources implements Controller {
     public static final TextResource module = GwtWidgetsExampleClientBundle.INSTANCE.module();
     public static final TextResource controller = GwtWidgetsExampleClientBundle.INSTANCE.controller();
     public static final TextResource view = GwtWidgetsExampleClientBundle.INSTANCE.view();
-    
-    @Override
-    public void onControllerLoad() {
-    }
+
 }
 
 interface GwtWidgetsExampleClientBundle extends ClientBundle {

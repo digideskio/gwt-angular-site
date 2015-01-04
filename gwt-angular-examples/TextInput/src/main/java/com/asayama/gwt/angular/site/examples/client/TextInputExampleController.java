@@ -1,8 +1,8 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 
-public class TextInputExampleController implements Controller {
+public class TextInputExampleController extends AbstractController {
 
     // Public final fields are directly bound to AngularJS's $scope, and they 
     // are available for use in the HTML.
@@ -14,13 +14,8 @@ public class TextInputExampleController implements Controller {
     
     private String name = null;
 
-    @Override
-    public void onControllerLoad() {
-        //noop
-    }
-
     // Public methods are automatically wired to AngularJS's $scope, and
-    // they are availabe for use in the HTML.
+    // they are available for use in the HTML.
     
     public String getName() {
         return name;

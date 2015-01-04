@@ -1,9 +1,9 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 
 
-public class CustomDirectiveExampleController implements Controller {
+public class CustomDirectiveExampleController extends AbstractController {
 
     private String name = null;
     

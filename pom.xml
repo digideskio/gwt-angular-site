@@ -53,7 +53,7 @@
     <gwt.version>2.6.1</gwt.version>
     <velocity.version>1.7</velocity.version>
     <gwt-binding.version>0.1.0</gwt-binding.version>
-    <gwt-angular.version>0.1.1</gwt-angular.version>
+    <gwt-angular.version>0.1.2-SNAPSHOT</gwt-angular.version>
   </properties>
 
   <build>

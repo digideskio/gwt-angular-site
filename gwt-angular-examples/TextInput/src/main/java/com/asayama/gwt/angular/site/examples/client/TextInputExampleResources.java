@@ -1,13 +1,13 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.resources.client.HtmlResource;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public class TextInputExampleResources implements Controller {
+public class TextInputExampleResources extends AbstractController {
 
     public static final String DEMO_URL = TextInputExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
     public static final HtmlResource textInput = TextInputExampleClientBundle.INSTANCE.textInput();
@@ -17,9 +17,6 @@ public class TextInputExampleResources implements Controller {
     public static final TextResource controller = TextInputExampleClientBundle.INSTANCE.controller();
     public static final TextResource view = TextInputExampleClientBundle.INSTANCE.view();
     
-    @Override
-    public void onControllerLoad() {
-    }
 }
 
 interface TextInputExampleClientBundle extends ClientBundle {

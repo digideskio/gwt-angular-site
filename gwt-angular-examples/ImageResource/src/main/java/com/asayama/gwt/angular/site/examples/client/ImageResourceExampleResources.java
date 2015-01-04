@@ -1,13 +1,13 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.resources.client.HtmlResource;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public class ImageResourceExampleResources implements Controller {
+public class ImageResourceExampleResources extends AbstractController {
     
     public static final String DEMO_URL = ImageResourceExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
     public static final String STREET_URL = ImageResources.INSTANCE.street().getSafeUri().asString();
@@ -23,9 +23,6 @@ public class ImageResourceExampleResources implements Controller {
     public static final TextResource resources = ImageResourceExampleClientBundle.INSTANCE.resources();
     public static final TextResource view = ImageResourceExampleClientBundle.INSTANCE.view();
     
-    @Override
-    public void onControllerLoad() {
-    }
 }
 
 interface ImageResourceExampleClientBundle extends ClientBundle {

@@ -1,13 +1,13 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.resources.client.HtmlResource;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public class UrlHashParameterExampleResources implements Controller {
+public class UrlHashParameterExampleResources extends AbstractController {
 
     public static final String DEMO_URL = UrlHashParameterExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
     public static final HtmlResource urlHashParameter = UrlHashParameterExampleClientBundle.INSTANCE.urlHashParameter();
@@ -17,9 +17,6 @@ public class UrlHashParameterExampleResources implements Controller {
     public static final TextResource controller = UrlHashParameterExampleClientBundle.INSTANCE.controller();
     public static final TextResource view = UrlHashParameterExampleClientBundle.INSTANCE.view();
     
-    @Override
-    public void onControllerLoad() {
-    }
 }
 
 interface UrlHashParameterExampleClientBundle extends ClientBundle {

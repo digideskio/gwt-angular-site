@@ -3,7 +3,7 @@ package com.asayama.gwt.angular.site.examples.client;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.angular.client.Injector;
 import com.asayama.gwt.angular.client.q.Promise.Continue;
 import com.asayama.gwt.angular.client.q.Promise.Done;
@@ -12,7 +12,7 @@ import com.asayama.gwt.jsni.client.JSArray;
 import com.asayama.gwt.jsni.client.JSON;
 import com.google.gwt.http.client.Response;
 
-public class HttpClientExampleController implements Controller {
+public class HttpClientExampleController extends AbstractController {
 
     private static final String CLASS = HttpClientExampleController.class.getName();
     private static final Logger LOG = Logger.getLogger(CLASS);

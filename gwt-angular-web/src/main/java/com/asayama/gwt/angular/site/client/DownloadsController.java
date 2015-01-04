@@ -1,11 +1,7 @@
 package com.asayama.gwt.angular.site.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 
-public class DownloadsController implements Controller {
+public class DownloadsController extends AbstractController {
 
-    @Override
-    public void onControllerLoad() {
-    }
-    
 }

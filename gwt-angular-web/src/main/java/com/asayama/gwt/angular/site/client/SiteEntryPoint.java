@@ -50,13 +50,14 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
         config(RouteProvider.class, new Configurator<RouteProvider>() {
             @Override
             public void configure(RouteProvider provider) {
+                ProjectResources projectResources = GWT.create(ProjectResources.class);
                 provider
-                    .when(ProjectResources.INSTANCE.documentation(), DocumentationController.class)
-                    .when(ProjectResources.INSTANCE.downloads(), DownloadsController.class)
-                    .when(ProjectResources.INSTANCE.jumbotron(), JumbotronController.class)
-                    .when(ProjectResources.INSTANCE.examples(), ExamplesController.class)
-                    .when(ProjectResources.INSTANCE.tutorial(), TutorialController.class)
-                    .otherwise(ProjectResources.INSTANCE.jumbotron());
+                    .when(projectResources.documentation(), DocumentationController.class)
+                    .when(projectResources.downloads(), DownloadsController.class)
+                    .when(projectResources.jumbotron(), JumbotronController.class)
+                    .when(projectResources.examples(), ExamplesController.class)
+                    .when(projectResources.tutorial(), TutorialController.class)
+                    .otherwise(projectResources.jumbotron());
             }
         });
         
@@ -96,8 +97,11 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
         public void run() {
             
             // Project Resources
-            scope.put("LOGO_LARGE", ProjectResources.INSTANCE.logoLarge());
-            scope.put("LOGO_SMALL", ProjectResources.INSTANCE.logoSmall());
+            ProjectResources projectResources = GWT.create(ProjectResources.class);
+            scope.put("LOGO_LARGE", projectResources.logoLarge());
+            scope.put("LOGO_SMALL", projectResources.logoSmall());
+            scope.put("NAVBAR_HTML", projectResources.navbar().getSafeUri().asString());
+            scope.put("FOOTER_HTML", projectResources.footer().getSafeUri().asString());
 
             // Project Constants
             scope.put("ANGULAR_VERSION", Angular.getVersion().getFull());

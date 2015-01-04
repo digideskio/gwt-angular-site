@@ -1,14 +1,11 @@
 package com.asayama.gwt.angular.site.client;
 
 import com.asayama.gwt.resources.client.HtmlResource;
-import com.google.gwt.core.shared.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
 
 public interface ProjectResources extends ClientBundle {
 
-    public static final ProjectResources INSTANCE = GWT.create(ProjectResources.class);
-    
     @Source("logo-small.png")
     public ImageResource logoSmall();
     
@@ -23,6 +20,9 @@ public interface ProjectResources extends ClientBundle {
     
     @Source("Examples.html")
     public HtmlResource examples();
+    
+    @Source("Footer.html")
+    public HtmlResource footer();
 
     @Source("Jumbotron.html")
     public HtmlResource jumbotron();

@@ -1,13 +1,13 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.resources.client.HtmlResource;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public class PrettifyExampleResources implements Controller {
+public class PrettifyExampleResources extends AbstractController {
 
     public static final String DEMO_URL = PrettifyExampleClientBundle.INSTANCE.demo().getSafeUri().asString();
     public static final HtmlResource prettify = PrettifyExampleClientBundle.INSTANCE.prettify();
@@ -17,9 +17,6 @@ public class PrettifyExampleResources implements Controller {
     public static final TextResource controller = PrettifyExampleClientBundle.INSTANCE.controller();
     public static final TextResource view = PrettifyExampleClientBundle.INSTANCE.view();
     
-    @Override
-    public void onControllerLoad() {
-    }
 }
 
 interface PrettifyExampleClientBundle extends ClientBundle {

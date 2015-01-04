@@ -1,11 +1,11 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.angular.client.Injector;
 import com.asayama.gwt.angular.client.location.Location;
 import com.asayama.gwt.angular.route.client.RouteParams;
 
-public class UrlHashParameterExampleController implements Controller {
+public class UrlHashParameterExampleController extends AbstractController {
 
     // Fields annotated Injector.Inject are injected by the framework
     

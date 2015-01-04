@@ -1,17 +1,14 @@
 package com.asayama.gwt.angular.site.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.i18n.client.Constants;
 
-public class JumbotronController implements Controller {
+public class JumbotronController extends AbstractController {
 
     public static final String LEARN_MORE = JumbotronConstants.INSTANCE.learnMore();
     public static final String MORE = JumbotronConstants.INSTANCE.more();
-    
-    @Override
-    public void onControllerLoad() {
-    }
+
 }
 
 interface JumbotronConstants extends Constants {
