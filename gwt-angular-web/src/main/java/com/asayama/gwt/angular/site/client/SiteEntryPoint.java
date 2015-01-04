@@ -98,28 +98,32 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
             
             // Project Resources
             ProjectResources projectResources = GWT.create(ProjectResources.class);
+            
             scope.put("LOGO_LARGE", projectResources.logoLarge());
             scope.put("LOGO_SMALL", projectResources.logoSmall());
             scope.put("NAVBAR_HTML", projectResources.navbar().getSafeUri().asString());
             scope.put("FOOTER_HTML", projectResources.footer().getSafeUri().asString());
 
             // Project Constants
+            ProjectConstants projectConstants = GWT.create(ProjectConstants.class);
+            
             scope.put("ANGULAR_VERSION", Angular.getVersion().getFull());
-            scope.put("GWT_VERSION", ProjectConstants.INSTANCE.gwtVersion());
-            scope.put("GWT_ANGULAR_VERSION", ProjectConstants.INSTANCE.gwtAngularVersion());
-            scope.put("GWT_ANGULAR_SITE_VERSION", ProjectConstants.INSTANCE.gwtAngularSiteVersion());
-            scope.put("GITHUB_GWT_ANGULAR_URL", ProjectConstants.INSTANCE.githubGwtAngularUrl());
-            scope.put("GITHUB_GWT_ANGULAR_EXAMPLES_URL", ProjectConstants.INSTANCE.githubGwtAngularExamplesUrl());
-            scope.put("GITHUB_GWT_ANGULAR_SITE_URL", ProjectConstants.INSTANCE.githubGwtAngularSiteUrl());
-            scope.put("GITHUB_GWT_ANGULAR_TUTORIAL_URL", ProjectConstants.INSTANCE.githubGwtAngularTutorialUrl());
-            scope.put("SONATYPE_URL", ProjectConstants.INSTANCE.sonatypeUrl());
+            scope.put("GWT_VERSION", projectConstants.gwtVersion());
+            scope.put("GWT_ANGULAR_VERSION", projectConstants.gwtAngularVersion());
+            scope.put("GWT_ANGULAR_SITE_VERSION", projectConstants.gwtAngularSiteVersion());
+            scope.put("GITHUB_GWT_ANGULAR_URL", projectConstants.githubGwtAngularUrl());
+            scope.put("GITHUB_GWT_ANGULAR_EXAMPLES_URL", projectConstants.githubGwtAngularExamplesUrl());
+            scope.put("GITHUB_GWT_ANGULAR_SITE_URL", projectConstants.githubGwtAngularSiteUrl());
+            scope.put("GITHUB_GWT_ANGULAR_TUTORIAL_URL", projectConstants.githubGwtAngularTutorialUrl());
+            scope.put("JAVADOC_URL", projectConstants.javadocUrl());
+            scope.put("SONATYPE_URL", projectConstants.sonatypeUrl());
 
-            // Project Constants - Navigation
-            scope.put("DEVELOP", ProjectConstants.INSTANCE.develop());
-            scope.put("DOCUMENTATION", ProjectConstants.INSTANCE.documentation());
-            scope.put("DOWNLOADS", ProjectConstants.INSTANCE.downloads());
-            scope.put("EXAMPLES", ProjectConstants.INSTANCE.examples());
-            scope.put("TUTORIAL", ProjectConstants.INSTANCE.tutorial());
+            scope.put("DEVELOP", projectConstants.develop());
+            scope.put("DOCUMENTATION", projectConstants.documentation());
+            scope.put("DOWNLOADS", projectConstants.downloads());
+            scope.put("EXAMPLES", projectConstants.examples());
+            scope.put("JAVADOC", projectConstants.javadoc());
+            scope.put("TUTORIAL", projectConstants.tutorial());
         }
     }
 }

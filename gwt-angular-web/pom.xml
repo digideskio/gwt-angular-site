@@ -24,6 +24,7 @@
 
   <properties>
     <github.url>https://github.com/kyoken74</github.url>
+    <javadoc.url>http://www.javadoc.io/doc</javadoc.url>
     <sonatype.url>https://oss.sonatype.org</sonatype.url>
   </properties>
 
