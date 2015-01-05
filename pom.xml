@@ -51,9 +51,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gwt.version>2.6.1</gwt.version>
+    <gwt-angular.version>0.1.2</gwt-angular.version>
     <velocity.version>1.7</velocity.version>
-    <gwt-binding.version>0.1.0</gwt-binding.version>
-    <gwt-angular.version>0.1.2-SNAPSHOT</gwt-angular.version>
   </properties>
 
   <build>
@@ -262,12 +261,12 @@
       <dependency>
         <groupId>com.asayama.gwt.jquery</groupId>
         <artifactId>gwt-jquery</artifactId>
-        <version>${gwt-binding.version}</version>
+        <version>0.1.1</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.gwt.bootstrap</groupId>
         <artifactId>gwt-bootstrap</artifactId>
-        <version>${gwt-binding.version}</version>
+        <version>0.1.1</version>
       </dependency>
 
       <!-- gwt -->
