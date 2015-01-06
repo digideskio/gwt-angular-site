@@ -70,8 +70,16 @@
               <directory>${basedir}/src/main/webapp</directory>
               <filtering>true</filtering>
             </resource>
+            <resource>
+              <directory>${basedir}/target/generated-sources/bower_components</directory>
+              <filtering>false</filtering>
+            </resource>
           </webResources>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

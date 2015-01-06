@@ -1,0 +1,27 @@
+{
+  "name": "gwt-angular-web",
+  "version": "0.1.1",
+  "homepage": "https://github.com/kyoken74/gwt-angular-site",
+  "authors": [
+    "Yuki Asayama <kyoken74@gmail.com>"
+  ],
+  "description": "GWT Angular demo web site",
+  "main": "index.html",
+  "keywords": [
+    "gwt",
+    "angular",
+    "web"
+  ],
+  "license": "Apache 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "~4.2.0"
+  }
+}
