@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.asayama.docs.gwt.angular</groupId>
     <artifactId>gwt-angular-site</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <relativePath>..</relativePath>
   </parent>
 
@@ -24,6 +24,7 @@
 
   <properties>
     <github.url>https://github.com/kyoken74</github.url>
+    <javadoc.url>http://www.javadoc.io/doc</javadoc.url>
     <sonatype.url>https://oss.sonatype.org</sonatype.url>
   </properties>
 
@@ -84,61 +85,61 @@
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>CustomDirective</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>CustomFilter</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>GwtWidgets</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>HttpClient</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>ImageResource</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>OnClickEvent</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>Prettify</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>Promise</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>TextInput</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>UrlHashParameter</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
       <scope>provided</scope>
     </dependency>
 
@@ -185,6 +186,10 @@
       <groupId>com.asayama.gwt.bootstrap</groupId>
       <artifactId>gwt-bootstrap</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.asayama.gwt.fa</groupId>
+      <artifactId>gwt-font-awesome</artifactId>
     </dependency>
 
   </dependencies>

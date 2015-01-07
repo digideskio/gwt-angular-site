@@ -22,18 +22,17 @@ public class Tutorial extends AbstractModule implements EntryPoint {
     }
     
     private JSArray<Page> getPages() {
+        TutorialResources tutorialResources = GWT.create(TutorialResources.class);
         JSArray<Page> pages = JSArray.create();
-        pages.add(Page.create("Introduction", TutorialResources.INSTANCE.introduction()));
-        pages.add(Page.create("Project Structure", TutorialResources.INSTANCE.projectStructure()));
-        pages.add(Page.create("Project Object Model", TutorialResources.INSTANCE.projectObjectModel()));
-        pages.add(Page.create("GWT Module XML", TutorialResources.INSTANCE.gwtModuleXML()));
+        pages.add(Page.create("Introduction", tutorialResources.introduction()));
+        pages.add(Page.create("Project Structure", tutorialResources.projectStructure()));
+        pages.add(Page.create("Project Object Model", tutorialResources.projectObjectModel()));
+        pages.add(Page.create("GWT Module XML", tutorialResources.gwtModuleXML()));
        return pages;
     }
 }
 
 interface TutorialResources extends ClientBundle {
-
-    public static final TutorialResources INSTANCE = GWT.create(TutorialResources.class);
 
     @Source("Introduction.html")
     public HtmlResource introduction();

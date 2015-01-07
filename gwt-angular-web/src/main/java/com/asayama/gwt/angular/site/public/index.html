@@ -15,9 +15,14 @@ if (isset($fragment)) {
 ?>
 <html lang="en">
 <head>
-<title>GWT Angular</title>
+<title>GWT Angular | AngularJS MVW Framework for Java Developers</title>
 <meta name="fragment" content="!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" 
+  content="AngularJS's client-side model view controller (MVC) framework, 
+  dependency injection, data binding and declarative templating is now 
+  available for Java developers through the power of GWT, a Java to JavaScript 
+  compiler and toolkit for web applications.">
 <link rel="icon" type="image/ico" href="favicon.ico" />
 <style>
 /* Move down content because we have a fixed navbar that is 50px tall */
@@ -33,8 +38,10 @@ pre.prettyprint {
 }
 </style>
 </head>
-<body data-ng-controller="com.asayama.gwt.angular.site.client.NavbarController">
-  <div data-ng-include="NAVBAR_HTML"></div>
+<body>
+  <div data-ng-controller="com.asayama.gwt.angular.site.client.NavbarController">
+    <div data-ng-include="NAVBAR_HTML"></div>
+  </div>
   <!--[if lte IE 8]>
   <div class="panel panel-danger" style="margin: 0;">
     <div class="panel-heading">
@@ -46,7 +53,9 @@ pre.prettyprint {
   <![endif]-->
   <div data-ng-view></div>
   <hr style="margin-top:4em;">
-  <div class="container" data-ng-include="FOOTER_HTML"></div>
+  <div data-ng-controller="com.asayama.gwt.angular.site.client.FooterController">
+    <div class="container" data-ng-include="FOOTER_HTML"></div>
+  </div>
   <script src="site.nocache.js"></script>
   <?php include_once('analytics.php'); ?>
 </body>

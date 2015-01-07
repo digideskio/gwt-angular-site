@@ -2,10 +2,10 @@ package com.asayama.gwt.angular.site.examples.client;
 
 import java.util.Date;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.google.gwt.user.client.Event;
 
-public class OnClickEventExampleController implements Controller {
+public class OnClickEventExampleController extends AbstractController {
 
     // Public final fields are directly bound to AngularJS's $scope, and 
     // they are available for use in the HTML.
@@ -15,11 +15,6 @@ public class OnClickEventExampleController implements Controller {
     // Other fields are used to represent the state of this controller.
 
     private String caption = "You have not clicked me";
-
-    @Override
-    public void onControllerLoad() {
-        //noop
-    }
 
     // Public methods are automatically wired to AngularJS's $scope, and
     // they are availabe for use in the HTML.

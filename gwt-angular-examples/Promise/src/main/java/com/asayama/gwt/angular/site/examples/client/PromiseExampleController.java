@@ -1,6 +1,6 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.asayama.gwt.angular.client.Injector;
 import com.asayama.gwt.angular.client.q.Progress;
 import com.asayama.gwt.angular.client.q.Promise;
@@ -9,7 +9,7 @@ import com.asayama.gwt.angular.client.q.Promise.Fail;
 import com.asayama.gwt.angular.client.q.Promise.Notify;
 import com.asayama.gwt.angular.site.examples.client.service.GreetingService;
 
-public class PromiseExampleController implements Controller {
+public class PromiseExampleController extends AbstractController {
 
     // Our custom service to demonstrate promise pipelining.
     @Injector.Inject
@@ -18,11 +18,6 @@ public class PromiseExampleController implements Controller {
     // View Models
     private String buttonCaption = "Go";
     private String greeting = "Click " + getButtonCaption();
-    
-    @Override
-    public void onControllerLoad() {
-        // noop
-    }
     
     public void onClickGo() {
         setGreeting("Loading...");

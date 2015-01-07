@@ -1,6 +1,6 @@
 package com.asayama.gwt.angular.site.examples.client;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 
 /**
  * When you create a custom filter, such as ReverseFilter, you must register it
@@ -17,17 +17,11 @@ import com.asayama.gwt.angular.client.Controller;
  * }</pre>
  * @author kyoken74
  */
-public class CustomFilterExampleController implements Controller {
+public class CustomFilterExampleController extends AbstractController {
 
     private String caption = "Hello, World!";
 
-    @Override
-    public void onControllerLoad() {
-       //noop
-    }
-    
     public String getCaption() {
         return caption;
     }
 }
-

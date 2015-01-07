@@ -2,7 +2,7 @@ package com.asayama.gwt.angular.site.examples.client;
 
 import java.util.Date;
 
-import com.asayama.gwt.angular.client.Controller;
+import com.asayama.gwt.angular.client.AbstractController;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.datepicker.client.DatePicker;
 
-public class GwtWidgetsExampleController implements Controller {
+public class GwtWidgetsExampleController extends AbstractController {
 
     // TODO automatically export the IsWidget instance members?
     private DialogBox dialogBox = null;

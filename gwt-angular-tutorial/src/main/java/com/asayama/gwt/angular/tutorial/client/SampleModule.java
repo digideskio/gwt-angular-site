@@ -5,6 +5,7 @@ import com.asayama.gwt.angular.client.Angular;
 import com.asayama.gwt.angular.client.Configurator;
 import com.asayama.gwt.angular.route.client.RouteProvider;
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 
 
 public class SampleModule extends AbstractModule implements EntryPoint {
@@ -16,9 +17,10 @@ public class SampleModule extends AbstractModule implements EntryPoint {
         config(RouteProvider.class, new Configurator<RouteProvider>() {
             @Override
             public void configure(RouteProvider routeProvider) {
+                SampleResources resources = GWT.create(SampleResources.class);
                 routeProvider
-                    .when(SampleResources.INSTANCE.sample(), SampleController.class)
-                    .otherwise(SampleResources.INSTANCE.sample());
+                    .when(resources.sample(), SampleController.class)
+                    .otherwise(resources.sample());
             }
         });
     }
