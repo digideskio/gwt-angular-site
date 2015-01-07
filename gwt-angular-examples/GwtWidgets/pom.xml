@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.asayama.docs.gwt.angular.examples</groupId>
     <artifactId>gwt-angular-examples</artifactId>
-    <version>0.1.2-SNAPSHOT</version>
+    <version>0.1.2</version>
     <relativePath>..</relativePath>
   </parent>
 

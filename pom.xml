@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.asayama.docs.gwt.angular</groupId>
   <artifactId>gwt-angular-site</artifactId>
-  <version>0.1.2-SNAPSHOT</version>
+  <version>0.1.2</version>
   <packaging>pom</packaging>
 
   <name>gwt-angular-site</name>
@@ -38,7 +38,7 @@
     <connection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</connection>
     <url>scm:git:git@github.com:kyoken74/gwt-angular-site.git</url>
     <developerConnection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>0.1.2</tag>
   </scm>
   <developers>
     <developer>
@@ -147,7 +147,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -224,22 +224,22 @@
       <dependency>
         <groupId>com.asayama.docs.gwt.angular.examples</groupId>
         <artifactId>gwt-angular-examples</artifactId>
-        <version>0.1.2-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-pages</artifactId>
-        <version>0.1.2-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-web</artifactId>
-        <version>0.1.2-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-tutorial</artifactId>
-        <version>0.1.2-SNAPSHOT</version>
+        <version>0.1.2</version>
       </dependency>
       
       <!-- gwt-angular -->
