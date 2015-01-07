@@ -70,16 +70,8 @@
               <directory>${basedir}/src/main/webapp</directory>
               <filtering>true</filtering>
             </resource>
-            <resource>
-              <directory>${basedir}/target/generated-sources/bower_components</directory>
-              <filtering>false</filtering>
-            </resource>
           </webResources>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -194,6 +186,10 @@
       <groupId>com.asayama.gwt.bootstrap</groupId>
       <artifactId>gwt-bootstrap</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.asayama.gwt.fa</groupId>
+      <artifactId>gwt-font-awesome</artifactId>
     </dependency>
 
   </dependencies>
