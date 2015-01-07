@@ -5,6 +5,7 @@ import com.google.gwt.i18n.client.Constants;
 
 public interface ProjectConstants extends Constants {
 
+    String buildTimestamp();
     String githubGwtAngularUrl();
     String githubGwtAngularExamplesUrl();
     String githubGwtAngularTutorialUrl();

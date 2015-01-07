@@ -1,18 +1,22 @@
+<style>
+footer p {
+  font-size: 11px;
+}
+</style>
 <footer data-ng-controller="com.asayama.gwt.angular.site.client.FooterController">
   <p>
-    Copyright &copy; Yuki Asayama 2014-{{ getDate() | date:'yyyy' }}<br />
-    <small>
-        Site Version:{{ GWT_ANGULAR_SITE_VERSION }}<br />
-        API Version:{{ GWT_ANGULAR_VERSION }}
-    </small>
+    Copyright &copy; Yuki Asayama 2014-{{ getDate() | date:'yyyy' }}
   </p>
   <p>
-    <small>
-      GWT Angular project is not affiliated with Google, GWT Project, or AngularJS.
-      GWT Angular is not an official project of GWT Project. Use of names, such as
-      Google, GWT, AngularJS, and other product and company names on this web site
-      or in the code does not imply endorsement of GWT Angular project by these 
-      entities.
-    </small>
+    GWT Angular project is not affiliated with Google, GWT Project, or AngularJS.
+    GWT Angular is not an official project of GWT Project. Use of names, such as
+    Google, GWT, AngularJS, and other product and company names on this web site
+    or in the code does not imply endorsement of GWT Angular project by these 
+    entities.
+  </p>
+  <p>
+    Site Version: {{ GWT_ANGULAR_SITE_VERSION }}
+    | API Version: {{ GWT_ANGULAR_VERSION }}
+    | Build Timestamp: {{ BUILD_TIMESTAMP }}
   </p>
 </footer>

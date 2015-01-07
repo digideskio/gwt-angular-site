@@ -111,6 +111,7 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
             scope.put("GWT_VERSION", projectConstants.gwtVersion());
             scope.put("GWT_ANGULAR_VERSION", projectConstants.gwtAngularVersion());
             scope.put("GWT_ANGULAR_SITE_VERSION", projectConstants.gwtAngularSiteVersion());
+            scope.put("BUILD_TIMESTAMP", projectConstants.buildTimestamp());
             scope.put("GITHUB_GWT_ANGULAR_URL", projectConstants.githubGwtAngularUrl());
             scope.put("GITHUB_GWT_ANGULAR_EXAMPLES_URL", projectConstants.githubGwtAngularExamplesUrl());
             scope.put("GITHUB_GWT_ANGULAR_SITE_URL", projectConstants.githubGwtAngularSiteUrl());

@@ -49,6 +49,8 @@
   </developers>
 
   <properties>
+    <build.timestamp>${maven.build.timestamp}</build.timestamp>
+    <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gwt.version>2.6.1</gwt.version>
     <gwt-angular.version>0.1.2</gwt-angular.version>
