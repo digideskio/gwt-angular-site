@@ -15,17 +15,17 @@
     <ul class="nav navbar-nav">
       <li class="{{ getStyleNavlinkHome() }}">
         <a href="#!/">
-          <span class="fa fa-home fa-lg"></span> Home
+          <span class="fa fa-home"></span> Home
         </a>
       </li>
       <li class="{{ getStyleNavlinkDownloads() }}">
         <a href="#!/downloads">
-          <span class="fa fa-download fa-lg"></span> {{ DOWNLOADS }}
+          <span class="fa fa-download"></span> {{ DOWNLOADS }}
         </a>
       </li>
       <li class="{{ getStyleNavlinkDocumentation() }}">
         <a href="#!/documentation">
-          <span class="fa fa-book fa-lg"></span> {{ DOCUMENTATION }}
+          <span class="fa fa-book"></span> {{ DOCUMENTATION }}
         </a>
       </li>
       <li class="{{ getStyleNavlinkTutorial() }}">
@@ -38,7 +38,7 @@
       </li>
       <li class="dropdown {{ getStyleNavlinkExamples() }}">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span class="fa fa-file-code-o fa-lg"></span> {{ EXAMPLES }} <b class="caret"></b>
+          <span class="fa fa-code"></span> {{ EXAMPLES }} <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
           <li><a data-ng-repeat="examplePage in getExamples()" href="#!/examples?page={{ examplePage.name }}">{{ examplePage.title }}</a></li>
@@ -46,7 +46,7 @@
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="fa fa-coffee fa-lg"></span> {{ JAVADOC }} <b class="caret"></b></a>
+            <span class="fa fa-coffee"></span> {{ JAVADOC }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a target="javadoc" href="{{ JAVADOC_URL }}/com.asayama.gwt.angular/gwt-angular-ng/{{ GWT_ANGULAR_VERSION }}">gwt-angular-ng</a></li>
           <li><a target="javadoc" href="{{ JAVADOC_URL }}/com.asayama.gwt.angular/gwt-angular-ngRoute/{{ GWT_ANGULAR_VERSION }}">gwt-angular-ngRoute</a></li>
