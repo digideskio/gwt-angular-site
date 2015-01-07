@@ -16,27 +16,27 @@ public class NavbarController extends AbstractController {
     
     public String getStyleNavlinkDownloads() {
         String hash = Window.Location.getHash();
-        return hash.equalsIgnoreCase("#/downloads") ? "active" : "";
+        return hash.startsWith("#!/downloads") ? "active" : "";
     }
 
     public String getStyleNavlinkExamples() {
         String hash = Window.Location.getHash();
-        return hash.equalsIgnoreCase("#/examples") ? "active" : "";
+        return hash.startsWith("#!/examples") ? "active" : "";
     }
 
     public String getStyleNavlinkHome() {
         String hash = Window.Location.getHash();
-        return hash.equalsIgnoreCase("#/jumbotron") ? "active" : "";
+        return hash.startsWith("#!/jumbotron") ? "active" : "";
     }
 
     public String getStyleNavlinkDocumentation() {
         String hash = Window.Location.getHash();
-        return hash.equalsIgnoreCase("#/documentation") ? "active" : "";
+        return hash.startsWith("#!/documentation") ? "active" : "";
     }
     
     public String getStyleNavlinkTutorial() {
         String hash = Window.Location.getHash();
-        return hash.equalsIgnoreCase("#/tutorial") ? "active" : "";
+        return hash.startsWith("#!/tutorial") ? "active" : "";
     }
     
     public JSArray<Page> getExamples() {
