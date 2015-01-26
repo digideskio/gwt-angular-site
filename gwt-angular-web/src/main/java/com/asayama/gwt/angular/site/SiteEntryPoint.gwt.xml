@@ -7,6 +7,7 @@
 
   <!-- Angular Native Modules -->
   <inherits name="com.asayama.gwt.angular.NG" />
+  <inherits name="com.asayama.gwt.angular.animate.NGAnimate" />
   <inherits name="com.asayama.gwt.angular.route.NGRoute" />
 
   <!-- Extended Angular Modules -->

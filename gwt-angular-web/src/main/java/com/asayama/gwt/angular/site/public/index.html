@@ -36,6 +36,25 @@ pre.prettyprint {
 .jumbotron p {
   font-size: 16px !important;
 }
+@-webkit-keyframes enter {
+  from { -webkit-transform: scale(1.005); }
+  to   { -webkit-transform: scale(1); }
+}
+@keyframes enter {
+  from { transform: scale(1.005); }
+  to   { transform: scale(1); }
+}
+.main.ng-enter {
+  -webkit-transition:.15s linear all;
+  transition:.15s linear all;
+  opacity: .7;
+  z-index: 8888;
+}
+.main.ng-enter.ng-enter-active {
+  -webkit-animation: enter .1s both ease-in;
+  animation: enter .1s both ease-in;
+  opacity: 1;
+}
 </style>
 </head>
 <body>
@@ -51,7 +70,7 @@ pre.prettyprint {
     </div>
   </div>
   <![endif]-->
-  <div data-ng-view></div>
+  <div class='main' data-ng-view></div>
   <hr style="margin-top:4em;">
   <div data-ng-controller="com.asayama.gwt.angular.site.client.FooterController">
     <div class="container" data-ng-include="FOOTER_HTML"></div>
