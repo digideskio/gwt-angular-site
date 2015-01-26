@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.asayama.docs.gwt.angular</groupId>
   <artifactId>gwt-angular-site</artifactId>
-  <version>0.1.2</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>gwt-angular-site</name>
@@ -38,7 +38,7 @@
     <connection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</connection>
     <url>scm:git:git@github.com:kyoken74/gwt-angular-site.git</url>
     <developerConnection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</developerConnection>
-    <tag>0.1.2</tag>
+    <tag>1.0.0</tag>
   </scm>
   <developers>
     <developer>
@@ -52,9 +52,8 @@
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <gwt.version>2.6.1</gwt.version>
-    <gwt-angular.version>0.1.2</gwt-angular.version>
-    <velocity.version>1.7</velocity.version>
+    <gwt.version>2.7.0</gwt.version>
+    <gwt-angular.version>0.2.1</gwt-angular.version>
   </properties>
 
   <build>
@@ -112,7 +111,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>gwt-maven-plugin</artifactId>
-          <version>2.6.1</version>
+          <version>${gwt.version}</version>
           <configuration>
             <gen>${project.build.directory}/generated</gen>
             <closureCompiler>false</closureCompiler>
@@ -224,28 +223,33 @@
       <dependency>
         <groupId>com.asayama.docs.gwt.angular.examples</groupId>
         <artifactId>gwt-angular-examples</artifactId>
-        <version>0.1.2</version>
+        <version>1.0.0</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-pages</artifactId>
-        <version>0.1.2</version>
+        <version>1.0.0</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-web</artifactId>
-        <version>0.1.2</version>
+        <version>1.0.0</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-tutorial</artifactId>
-        <version>0.1.2</version>
+        <version>1.0.0</version>
       </dependency>
       
       <!-- gwt-angular -->
       <dependency>
         <groupId>com.asayama.gwt.angular</groupId>
         <artifactId>gwt-angular-ng</artifactId>
+        <version>${gwt-angular.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.asayama.gwt.angular</groupId>
+        <artifactId>gwt-angular-ngAnimate</artifactId>
         <version>${gwt-angular.version}</version>
       </dependency>
       <dependency>
