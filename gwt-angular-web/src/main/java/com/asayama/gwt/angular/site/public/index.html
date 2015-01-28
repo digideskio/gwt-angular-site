@@ -30,30 +30,69 @@ body {
   padding-top: 50px !important;
   padding-bottom: 20px !important;
 }
+
+/* Default font size of 13px seems a bit out of place */
 pre.prettyprint {
   font-size: 12px !important;
 }
+
+/* Reduce the Jumbotron paragraph font size to 16px */
 .jumbotron p {
   font-size: 16px !important;
 }
-@-webkit-keyframes enter {
-  from { -webkit-transform: scale(1.005); }
+
+/* Define view transition animation */
+@-webkit-keyframes scaleIn {
+  from { -webkit-transform: scale(1.2); }
   to   { -webkit-transform: scale(1); }
 }
-@keyframes enter {
-  from { transform: scale(1.005); }
+@keyframes scaleIn {
+  from { transform: scale(1.2); }
   to   { transform: scale(1); }
 }
-.main.ng-enter {
-  -webkit-transition:.15s linear all;
-  transition:.15s linear all;
-  opacity: .7;
-  z-index: 8888;
+@-webkit-keyframes scaleOut {
+  to   { -webkit-transform: scale(1.7); }
 }
-.main.ng-enter.ng-enter-active {
-  -webkit-animation: enter .1s both ease-in;
-  animation: enter .1s both ease-in;
+@keyframes scaleOut {
+  to   { transform: scale(1.7); }
+}
+
+/* Scale in and out */
+.scaleInOut.ng-enter {
+  -webkit-transition: .4s linear all;
+  transition: .4s linear all;
+  opacity: 0;
+}
+.scaleInOut.ng-enter.ng-enter-active {
+  -webkit-animation: scaleIn .4s both ease-out;
+  animation: scaleIn .4s both ease-out;
   opacity: 1;
+}
+.scaleInOut.ng-leave {
+  -webkit-transition: .2s linear all;
+  transition: .2s linear all;
+}
+.scaleInOut.ng-leave.ng-leave-active {
+  -webkit-animation: scaleOut .2s both linear;
+  animation: scaleOut .2s both linear;
+  opacity: 0;
+}
+
+/* Fade in and out */
+.fadeInOut.ng-enter {
+  -webkit-transition: .4s linear all;
+  transition: .4s linear all;
+  opacity: 0;
+}
+.fadeInOut.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.fadeInOut.ng-leave {
+  -webkit-transition: .2s linear all;
+  transition: .2s linear all;
+}
+.fadeInOut.ng-leave.ng-leave-active {
+  opacity: 0;
 }
 </style>
 </head>
@@ -70,7 +109,7 @@ pre.prettyprint {
     </div>
   </div>
   <![endif]-->
-  <div class='main' data-ng-view></div>
+  <div class='{{ getStyleClass() }}' data-ng-view></div>
   <hr style="margin-top:4em;">
   <div data-ng-controller="com.asayama.gwt.angular.site.client.FooterController">
     <div class="container" data-ng-include="FOOTER_HTML"></div>

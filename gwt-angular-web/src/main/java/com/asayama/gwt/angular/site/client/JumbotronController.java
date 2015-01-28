@@ -9,6 +9,10 @@ public class JumbotronController extends AbstractController {
     private static final JumbotronConstants CONSTANTS = GWT.create(JumbotronConstants.class);
     public static final String LEARN_MORE = CONSTANTS.learnMore();
     public static final String MORE = CONSTANTS.more();
+    
+    public String getStyleClass() {
+        return "scaleInOut";
+    }
 }
 
 interface JumbotronConstants extends Constants {
