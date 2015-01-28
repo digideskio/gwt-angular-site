@@ -9,6 +9,10 @@ public class DocumentationController extends AbstractController {
 
     private static final DocumentationResources RESOURCES = GWT.create(DocumentationResources.class);
     public static final ImageResource MVC = RESOURCES.mvc();
+    
+    public String getStyleClass() {
+        return "scaleInOut";
+    }
 }
 
 interface DocumentationResources extends ClientBundle {

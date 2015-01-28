@@ -15,6 +15,10 @@ public class ExamplesController extends AbstractMultiPageController {
     public String getStylePageActive(String key) {
         return isPageActive(key) ? "active" : "";
     }
+    
+    public String getStyleClass() {
+        return "fadeInOut";
+    }
 
     // Getters and Setters
 
