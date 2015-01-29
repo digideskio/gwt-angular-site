@@ -101,13 +101,7 @@ pre.prettyprint {
     <div data-ng-include="NAVBAR_HTML"></div>
   </div>
   <!--[if lte IE 8]>
-  <div class="panel panel-danger" style="margin: 0;">
-    <div class="panel-heading">
-      <span class="glyphicon glyphicon-warning-sign"></span>
-      <b>WARNING</b>: Internet Explorer 8 and below are not supported.
-      <a href="ie8.html">Why is IE8 not supported?</a>
-    </div>
-  </div>
+  <meta http-equiv="refresh" content="0; url=ie8.html">
   <![endif]-->
   <div class='{{ getStyleClass() }}' data-ng-view></div>
   <hr style="margin-top:4em;">
