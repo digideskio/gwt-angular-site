@@ -1,4 +1,4 @@
-<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.CustomDirectiveExampleResources">
+<div>
   <p>
     GWT Angular wraps AngularJS's mechanism for defining directives, so that the
     directives can be defined in Java language. We demonstrate this feature
@@ -6,7 +6,7 @@
     the screen.
   </p>
   <div class="panel panel-primary">
-    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+    <div class="panel-body" data-ng-include="'CustomDirectiveExample.html'"></div>
   </div>
   
   <h2>View</h2>
@@ -19,14 +19,14 @@
     <code>data-ng-*</code>. The directive shown here, however, has the prefix
     of <code>data-ng-my-*</code>.
   </p>
-  <pre data-gwt-prettify="view"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/CustomDirectiveExample.html'"></pre>
 
   <h2>Directive</h2>
   <p>
     Let's take a look at the Java code that was written to support this 
     directive.
   </p>
-  <pre data-gwt-prettify="directive"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/directive/MyHello.java'"></pre>
   <p>
     In order to define a custom directive, you must implement GWT Angular's
     <code>Directive</code> interface, for which there is a convenient abstract
@@ -45,7 +45,7 @@
   </p>
   
   <h2>Template</h2>
-  <pre data-gwt-prettify="template"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/directive/MyHello.html'"></pre>
   <p>
     The template HTML for this example is shown above. This is the content of
     <code>MyHello.html</code> that was bound to the Java code via <code>
@@ -60,14 +60,14 @@
   </p>
   
   <h2>Controller</h2>
-  <pre data-gwt-prettify="controller"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/CustomDirectiveExampleController.java'"></pre>
 
   <h2>Module</h2>
   <p>
     Of course, both the directive and controller code must be registered with an
     Angular module, e.g.
   </p>
-  <pre data-gwt-prettify="module"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/CustomDirectiveExample.java'"></pre>
   <p>
     We need to clarify what we mean by the "name of the directive." In the view
     code, we used the directive <code>data-my-hello</code>, but inside the 
@@ -96,7 +96,7 @@
   <p>
     The following modules are required in the gwt.xml.
   </p>
-  <pre data-gwt-prettify="config"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/CustomDirectiveExample.gwt.xml'"></pre>
 
   <p>
     The following Maven dependencies are required in the pom.xml.
