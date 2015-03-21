@@ -1,4 +1,4 @@
-<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.TextInputExampleResources">
+<div>
   <p>
     This example demonstrates the declaration of Angular model and the 
     communication between the view (HTML) and the controller (Java) using this
@@ -11,7 +11,7 @@
     "<b>Hello, Jack!</b>" as you type in the value.
   </p>
   <div class="panel panel-primary">
-    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+    <div class="panel-body" data-ng-include="'TextInputExample.html'"></div>
   </div>
 
   <h2>View</h2>
@@ -24,7 +24,7 @@
     controller via <code>data-ng-change</code> directive, which calls 
     <code>setName()</code> method.
   </p>
-  <pre data-gwt-prettify="view"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/TextInputExample.html'"></pre>
 
   <h2>Controller</h2>
   <p>
@@ -38,13 +38,13 @@
     These public final constants are bound to the view, so that they can be
     inserted into the view via the use of double mustache notation, {{ }}.
   </p>
-  <pre data-gwt-prettify="controller"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/TextInputExampleController.java'"></pre>
 
   <h2>Configuration</h2>
   <p>
     The following modules are required in the gwt.xml.
   </p>
-  <pre data-gwt-prettify="config"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/TextInputExample.gwt.xml'"></pre>
 
   <p>
     The following Maven dependencies are required in the pom.xml.
