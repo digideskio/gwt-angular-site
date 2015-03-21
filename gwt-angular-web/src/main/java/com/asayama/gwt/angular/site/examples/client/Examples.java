@@ -11,7 +11,6 @@ public class Examples extends AbstractModule implements EntryPoint {
     public void onModuleLoad() {
         Angular.module(this);
         constant("examples", getPages());
-        controller(PrettifyExampleResources.class);
         controller(PromiseExampleResources.class);
         controller(TextInputExampleResources.class);
         controller(UrlHashParameterExampleResources.class);
@@ -28,7 +27,7 @@ public class Examples extends AbstractModule implements EntryPoint {
         pages.add(Page.create("URL Hash Parameter", UrlHashParameterExampleResources.urlHashParameter));
         pages.add(Page.create("HTTP Client", "httpClient", "HttpClientExampleDocumentation.html"));
         pages.add(Page.create("GWT Widgets", "gwtWidgets", "GwtWidgetsExampleDocumentation.html"));
-        pages.add(Page.create("Prettify", PrettifyExampleResources.prettify));
+        pages.add(Page.create("Prettify", "prettify", "PrettifyExampleDocumentation.html"));
        return pages;
     }
 }
