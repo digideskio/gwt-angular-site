@@ -11,7 +11,6 @@ public class Examples extends AbstractModule implements EntryPoint {
     public void onModuleLoad() {
         Angular.module(this);
         constant("examples", getPages());
-        controller(OnClickEventExampleResources.class);
         controller(PrettifyExampleResources.class);
         controller(PromiseExampleResources.class);
         controller(TextInputExampleResources.class);
@@ -21,7 +20,7 @@ public class Examples extends AbstractModule implements EntryPoint {
     private JSArray<Page> getPages() {
         JSArray<Page> pages = JSArray.create();
         pages.add(Page.create("Text Input", TextInputExampleResources.textInput));
-        pages.add(Page.create("OnClick Event", OnClickEventExampleResources.onClickEvent));
+        pages.add(Page.create("OnClick Event", "onClickEvent", "OnClickEventExampleDocumentation.html"));
         pages.add(Page.create("Custom Directive", "customDirective", "CustomDirectiveExampleDocumentation.html"));
         pages.add(Page.create("Custom Filter", "customFilter", "CustomFilterExampleDocumentation.html"));
         pages.add(Page.create("Promise", PromiseExampleResources.promise));
