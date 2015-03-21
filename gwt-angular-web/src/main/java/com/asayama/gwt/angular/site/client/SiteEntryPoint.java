@@ -50,14 +50,13 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
         config(RouteProvider.class, new Configurator<RouteProvider>() {
             @Override
             public void configure(RouteProvider provider) {
-                ProjectResources projectResources = GWT.create(ProjectResources.class);
                 provider
-                    .when(projectResources.documentation(), DocumentationController.class)
-                    .when(projectResources.downloads(), DownloadsController.class)
-                    .when(projectResources.jumbotron(), JumbotronController.class)
-                    .when(projectResources.examples(), ExamplesController.class)
-                    .when(projectResources.tutorial(), TutorialController.class)
-                    .otherwise(projectResources.jumbotron());
+                    .when("/documentation", "Documentation.html", DocumentationController.class)
+                    .when("/downloads", "Downloads.html", DownloadsController.class)
+                    .when("/jumbotron", "Jumbotron.html", JumbotronController.class)
+                    .when("/examples", "Examples.html", ExamplesController.class)
+                    .when("/tutorial", "Tutorial.html", TutorialController.class)
+                    .otherwise("/jumbotron");
             }
         });
         
@@ -96,13 +95,10 @@ public class SiteEntryPoint extends AbstractModule implements EntryPoint {
         @Override
         public void run() {
             
-            // Project Resources
-            ProjectResources projectResources = GWT.create(ProjectResources.class);
-            
-            scope.put("LOGO_LARGE", projectResources.logoLarge());
-            scope.put("LOGO_SMALL", projectResources.logoSmall());
-            scope.put("NAVBAR_HTML", projectResources.navbar().getSafeUri().asString());
-            scope.put("FOOTER_HTML", projectResources.footer().getSafeUri().asString());
+            scope.put("LOGO_LARGE", "logo-large.png");
+            scope.put("LOGO_SMALL", "logo-small.png");
+            scope.put("NAVBAR_HTML", "Navbar.html");
+            scope.put("FOOTER_HTML", "Footer.html");
 
             // Project Constants
             ProjectConstants projectConstants = GWT.create(ProjectConstants.class);
