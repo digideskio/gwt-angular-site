@@ -1,4 +1,4 @@
-<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.GwtWidgetsExampleResources">
+<div>
   <p>
     GWT Angular's one of primary objectives is to bring AngularJS's MVC 
     framework to Java developers, in a way that is natural for Java developers.
@@ -19,7 +19,7 @@
     gallery</a>.
   </p>
   <div class="panel panel-primary">
-    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+    <div class="panel-body" data-ng-include="'GwtWidgetsExample.html'"></div>
   </div>
   
   <h2>View</h2>
@@ -31,7 +31,7 @@
     we do not use GWT's layout mechanism, but we use HTML to control the
     layout.
   </p>
-  <pre data-gwt-prettify="view"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/GwtWidgetsExample.html'"></pre>
   
   <h2>Controller</h2>
   <p>
@@ -50,13 +50,13 @@
     method, which displays GWT <code>DialogBox</code> object. The definition
     of the object is shown as <code>GwtWidgetDemoDialogBox</code>.
   </p>
-  <pre data-gwt-prettify="controller"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/GwtWidgetsExampleController.java'"></pre>
 
   <h2>Configuration</h2>
   <p>
     The following modules are required in the gwt.xml.
   </p>
-  <pre data-gwt-prettify="config"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/GwtWidgetsExample.gwt.xml'"></pre>
 
   <p>
     The following Maven dependencies are required in the pom.xml.
