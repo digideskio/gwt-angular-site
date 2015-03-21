@@ -11,7 +11,6 @@ public class Examples extends AbstractModule implements EntryPoint {
     public void onModuleLoad() {
         Angular.module(this);
         constant("examples", getPages());
-        controller(UrlHashParameterExampleResources.class);
     }
     
     private JSArray<Page> getPages() {
@@ -22,7 +21,7 @@ public class Examples extends AbstractModule implements EntryPoint {
         pages.add(Page.create("Custom Filter", "customFilter", "CustomFilterExampleDocumentation.html"));
         pages.add(Page.create("Promise", "promise", "PromiseExampleDocumentation.html"));
         pages.add(Page.create("Image Resource", "imageResource", "ImageResourceExampleDocumentation.html"));
-        pages.add(Page.create("URL Hash Parameter", UrlHashParameterExampleResources.urlHashParameter));
+        pages.add(Page.create("URL Hash Parameter", "urlHashParameter", "UrlHashParameterExampleDocumentation.html"));
         pages.add(Page.create("HTTP Client", "httpClient", "HttpClientExampleDocumentation.html"));
         pages.add(Page.create("GWT Widgets", "gwtWidgets", "GwtWidgetsExampleDocumentation.html"));
         pages.add(Page.create("Prettify", "prettify", "PrettifyExampleDocumentation.html"));
