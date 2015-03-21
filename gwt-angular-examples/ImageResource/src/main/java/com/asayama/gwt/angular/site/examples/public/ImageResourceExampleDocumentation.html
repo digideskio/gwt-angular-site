@@ -1,4 +1,4 @@
-<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.ImageResourceExampleResources">
+<div>
   <p>
     GWT Angular supports the inclusion of GWT's <code>ImageResource</code>
     into the HTML views via a directive, <code>data-gwt-image-resource</code>.
@@ -9,7 +9,7 @@
     resources.
   </p>
   <div class="panel panel-primary">
-    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+    <div class="panel-body" data-ng-include="'ImageResourceExample.html'"></div>
   </div>
 
   <h2>View</h2>
@@ -18,7 +18,7 @@
     variables, STREET, WTC, BOAT, and PEOPLE. These variables are bound to the
     controller via Angular scope to <code>ImageResource</code> objects.
   </p>
-  <pre data-gwt-prettify="view"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/ImageResourceExample.html'"></pre>
 
   <h2>Controller</h2>
   <p>
@@ -37,44 +37,26 @@
     same, GWT compiler will generate a new name for it, so that the newer 
     version of the file is loaded by the browser.
   </p><p>
-    In this example, the following resource names are compiled as follows.
-  </p><p style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-    <span class="glyphicon glyphicon-picture"></span>
-    street.jpg
-    <span class="glyphicon glyphicon-arrow-right"></span> {{ STREET_URL }}
-  </p><p style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-    <span class="glyphicon glyphicon-picture"></span>
-    wtc.jpg
-    <span class="glyphicon glyphicon-arrow-right"></span> {{ WTC_URL }}
-  </p><p style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-    <span class="glyphicon glyphicon-picture"></span>
-    boat.jpg
-    <span class="glyphicon glyphicon-arrow-right"></span> {{ BOAT_URL }}
-  </p><p style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden;">
-    <span class="glyphicon glyphicon-picture"></span>
-    people.jpg
-    <span class="glyphicon glyphicon-arrow-right"></span> {{ PEOPLE_URL }}
-  </p><p>
     On a browser that supports it, you may see the images compiled into <code>
     data:</code> URL for directly embedded into the resulting HTML. Otherwise,
     you should see <code>http:</code> URL for asynchronously loading from the
     server via hashed filename.
   </p>
 
-  <pre data-gwt-prettify="controller"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/ImageResourceExampleController.java'"></pre>
   
   <p>
     <code>ImageResources</code> class seen in the controller class is an 
     extension of GWT Angular's <code>ClientResources</code> class.
   </p>
   
-  <pre data-gwt-prettify="resources"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/ImageResources.java'"></pre>
 
   <h2>Configuration</h2>
   <p>
     The following modules are required in the gwt.xml.
   </p>
-  <pre data-gwt-prettify="config"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/ImageResourceExample.gwt.xml'"></pre>
 
   <p>
     The following Maven dependencies are required in the pom.xml.
