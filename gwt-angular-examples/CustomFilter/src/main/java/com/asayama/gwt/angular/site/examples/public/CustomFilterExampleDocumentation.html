@@ -1,4 +1,4 @@
-<div data-ng-controller="com.asayama.gwt.angular.site.examples.client.CustomFilterExampleResources">
+<div>
   <p>
     GWT Angular allows the users to write the <i>filter</i> code in Java.
     In this example, we write a <code>ReverseFilter</code>, which takes a
@@ -8,7 +8,7 @@
     only formats the string on the screen.
   </p>
   <div class="panel panel-primary">
-    <div class="panel-body" data-ng-include="DEMO_URL"></div>
+    <div class="panel-body" data-ng-include="'CustomFilterExample.html'"></div>
   </div>
 
   <h2>Filter</h2>
@@ -18,7 +18,7 @@
     <code>filter(String)</code>. The argument is the original model, and the
     returned string is the formatted string that appears on the screen.
   </p>
-  <pre data-gwt-prettify="filter"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/filter/Reverse.java'"></pre>
   <p>
     When you create a custom filter, such as ReverseFilter, you must register 
     it with your module. In this example, we let the GWT Angular figure out the
@@ -26,7 +26,7 @@
     name, except that the first letter is not capitalized, i.e. "Reverse" 
     becomes "reverse".
   </p>
-  <pre data-gwt-prettify="module"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/CustomFilterExample.java'"></pre>
 
   <h2>View</h2>
   <p>
@@ -36,7 +36,7 @@
     course, being the <code>reverse</code>. The filter should be place to the
     right of the model you wish to process.
   </p>
-  <pre data-gwt-prettify="view"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/CustomFilterExample.html'"></pre>
   <p>
     Note that the use of filter does not alter the state of the underlying 
     model. In another words, if you inspect the value of the <code>caption</code>
@@ -48,7 +48,7 @@
   <p>
     The following modules are required in the gwt.xml.
   </p>
-  <pre data-gwt-prettify="config"></pre>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/CustomFilterExample.gwt.xml'"></pre>
 
   <p>
     The following Maven dependencies are required in the pom.xml.
