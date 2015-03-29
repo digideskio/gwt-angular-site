@@ -297,17 +297,17 @@
       <dependency>
         <groupId>com.asayama.gwt.jquery</groupId>
         <artifactId>gwt-jquery</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.gwt.bootstrap</groupId>
         <artifactId>gwt-bootstrap</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.gwt.fa</groupId>
         <artifactId>gwt-font-awesome</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3-SNAPSHOT</version>
       </dependency>
 
       <!-- gwt -->
