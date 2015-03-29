@@ -4472,7 +4472,9 @@ a.list-group-item {
   z-index: 2;
   color: #fff;
   background-color: #3e444c;
-  border-color: transparent; }
+  border-color: transparent;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
   .list-group-item.active .list-group-item-heading,
   .list-group-item.active .list-group-item-heading > small,
   .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
