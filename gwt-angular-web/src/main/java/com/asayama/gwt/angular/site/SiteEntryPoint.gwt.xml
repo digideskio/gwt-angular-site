@@ -22,9 +22,7 @@
 
   <!-- Bootstrap -->
   <inherits name="com.asayama.gwt.bootstrap.Bootstrap" />
-  <!--
   <inherits name="com.asayama.gwt.bootstrap.BootstrapTheme" />
-  -->
   
   <!-- Font Awesome Icons -->
   <inherits name="com.asayama.gwt.fa.FontAwesome" />

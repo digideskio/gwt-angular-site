@@ -40,6 +40,7 @@
     <developerConnection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+  
   <developers>
     <developer>
       <id>kyoken74</id>
@@ -53,7 +54,7 @@
     <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gwt.version>2.7.0</gwt.version>
-    <gwt-angular.version>0.2.3-SNAPSHOT</gwt-angular.version>
+    <gwt-angular.version>0.2.3</gwt-angular.version>
   </properties>
 
   <build>
