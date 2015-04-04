@@ -1,0 +1,70 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row" style="text-align:center;">
+      <h3>Download the latest release of GWT Angular</h3>
+      <h1 style="margin-top:1em;">{{ GWT_ANGULAR_VERSION }}</h1>
+      <div style="margin-top:4em;">
+        <a href="{{ GITHUB_GWT_ANGULAR_URL }}/archive/{{ GWT_ANGULAR_VERSION }}.zip"
+          class="btn btn-primary btn-lg" role="button">
+          <span class="fa fa-file-archive-o"></span> .zip</a>
+        <span style="margin-left:2em;">&nbsp;</span>
+        <a href="{{ GITHUB_GWT_ANGULAR_URL }}/archive/{{ GWT_ANGULAR_VERSION }}.tar.gz"
+          class="btn btn-primary btn-lg" role="button">
+          <span class="fa fa-file-archive-o"></span> .tar.gz</a>
+      </div>
+      <div style="margin-top: 2em;">
+        <a class="btn btn-link btn-lg" role="button"
+          target="{{ GITHUB_GWT_ANGULAR_URL }}/releases" 
+          href="{{ GITHUB_GWT_ANGULAR_URL }}/releases">
+          <span class="fa fa-tags fa-lg"></span>&nbsp;&nbsp;Previous releases on GitHub</a>
+      </div>
+      <div style="margin-top: 2em;">
+        <a class="btn btn-link btn-lg" role="button"
+          target="{{ SONATYPE_URL }}/#nexus-search;quick~gwt-angular" 
+          href="{{ SONATYPE_URL }}/#nexus-search;quick~gwt-angular">
+          <span class="fa fa-align-justify fa-lg"></span>&nbsp;&nbsp;Find it in Sonatype Nexus</a>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h1>Download via Maven</h1>
+      <p>
+        If you are looking into GWT Angular, you must have some experience with 
+        Java development. <a href="http://maven.apache.org/">Maven</a> is a 
+        popular artifact and dependency management tool among Java developers,
+        and GWT Angular fits right into that paradigm. If you would rather have
+        Maven take care of the download for you, you can start with the following
+        configuration in your POM to get you started. <code>gwt-angular-ng</code>
+        is the core API. <code>gwt-angular-ngRoute</code> module is useful if you
+        want to create a single-page-application, and use hash part of your URL
+        for site navigation.
+      </p>
+      <pre class="prettyprint">
+&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+    &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+    &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+    &lt;artifactId&gt;gwt-angular-ngRoute&lt;/artifactId&gt;
+    &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;</pre>
+      <p>
+        You can also see the POM for the project for this web site by visiting
+        <a href="{{ GITHUB_GWT_ANGULAR_SITE_URL }}/blob/master/gwt-angular-web/pom.xml">
+        GitHub</a>.
+      </p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div><!-- /.container -->

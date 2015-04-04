@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.asayama.docs.gwt.angular.examples</groupId>
     <artifactId>gwt-angular-examples</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <relativePath>..</relativePath>
   </parent>
 
@@ -15,7 +15,7 @@
   <description>
     An example GWT Angular module demonstrating the use of GWT's ImageResource.
   </description>
- 
+
   <build>
     <resources>
       <resource>
@@ -29,6 +29,27 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-source</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/com/asayama/gwt/angular/site/examples/public/src/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

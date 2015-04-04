@@ -1,0 +1,133 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row" style="text-align: center;">
+      <img class="img-responsive" style="margin: 0 auto;" ng-src="{{ MVC }}">
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+<div class="container" style="margin-top: 2em;">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    
+      <h1>The Angular Way</h1>
+      <p>
+        AngularJS, in a nut shell, is an MVC (Model View Controller) framework for 
+        the web. It allows the view components to be written in plain old HTML, and 
+        the Controllers and the Model in JavaScript. The framework takes care of 
+        the binding between the view, controller, and the model, such that the DOM 
+        events from the HTML are easily bound to the Controllers, and the change to 
+        the Model are automatically reflected in the View.
+      </p><p>
+        The basic plumbing is handled by the framework under the hood, so that the 
+        application developers can focus on providing the implementation for view, 
+        controller, and model components, rather than spending time and energy on 
+        the coordination of these components.
+      </p><p>
+        AngularJS expects that the developers using the framework be somewhat 
+        familiar with JavaScript language. While neither HTML or JavaScript are 
+        difficult languages to learn, they are, in particular, JavaScript is, 
+        difficult to become an expert in.
+      </p><p>
+        This is where GWT Angular steps in. GWT Angular fuses GWT (Google Web 
+        Toolkit) and AngularJS, so that the views can be written in HTML, while the 
+        controllers can be written in Java language.
+      </p><p>
+        Java language is a high structured, self-documenting programming language. 
+        While it lacks the agility and flexibility of JavaScript, it makes up for 
+        that by enforcing structure, which makes it a more difficult language to 
+        write poorly written code. This may not seem like a high praise, but it is 
+        invaluable for large enterprise projects where the skill levels of the 
+        developers on the team are often mixed, and the project must exchange hands 
+        many times over time.
+      </p><p>
+        GWT is an open source web application development toolkit, originally 
+        developed by Google. It comes with a compiler which compiles Java source 
+        code into a cross-browser compatible, minified, obfuscated JavaScript. This 
+        enables the developers to program web browsers using IDEs and tools 
+        commonly available for Java language.
+      </p><p>
+        With GWT Angular, thanks to AngularJS and GWT, the developers do not have 
+        to implement any complex DOM manipulation from often fragile JavaScript. 
+        There is no need to worry about the JavaScript minifiers breaking the 
+        application in production. The verbose and structured nature of Java 
+        language makes long term maintenance of large and complex code suitable in 
+        an enterprise setting.
+      </p>
+    
+      <h1>FAQ <small>Frequently Asked Questions</small></h1>
+    
+      <h3>How is GWT Angular different from Java Applet?</h3>
+      <blockquote>
+        GWT Angular does not require Java Plugin to be installed into the end 
+        users' browser for it to function. The code written in Java is compiled 
+        into cross-browser compatible JavaScript, so that it can be loaded directly
+        into the browser.
+      </blockquote>
+    
+      <h3>Do we need to install JRE on end users' computers?</h3>
+      <blockquote>
+        No. GWT Angular compiles into JavaScript, so that end users do not need to
+        install JRE (Java Runtime Environment) on their machines.
+      </blockquote>
+    
+      <h3>Do we need a JEE server to host applications written using GWT Angular?</h3>
+      <blockquote>
+        No. GWT Angular compiles into JavaScript. Any plain old web servers that
+        serves HTML, CSS, JavaScript, etc, can host applications written using GWT
+        Angular.
+      </blockquote>
+      
+      <h3>If it compiles the code into JavaScript, and runs in the browser, then 
+      why do we need to write the code in JavaScript?</h3>
+      <blockquote>
+        You can write your code in JavaScript if you wish, but then you will not 
+        need to use GWT Angular for that. We suggest that you look into using 
+        <a href="https://angularjs.org">AngularJS</a> directly.
+      </blockquote>
+      
+      <h3>Can we use Spring Framework with GWT Angular?</h3>
+      <blockquote>
+        No. Spring Framework is a server-side technology, and requires JRE. GWT 
+        Angular is a client-side technology that is compiled into JavaScript and 
+        runs on a JavaScriptEngine (web browser). GWT Angular provides a modular
+        component management and injection framework, which is designed to run
+        efficiently in web browsers. There is no need to use an additional 
+        framework such as Spring in conjunction with GWT Angular. This is not to
+        say that you cannot use Spring for your server-side code. If you wish to
+        provide web service implementations using Spring, there is nothing stopping
+        you from doing so when the User Interface is written using GWT Angular.
+        If you are still not satisfied with the component management and injection
+        mechanisms provided by Angular, feel free to look into other  dependency 
+        injection frameworks for client-side, such as 
+        <a href="https://code.google.com/p/google-gin/">GIN (GWT INjection)</a>.
+      </blockquote>
+      
+      <h3>I currently use GWT. Why should I bother looking at GWT Angular?</h3>
+      <blockquote>
+        GWT does not come with a straight forward MVC framework. You can try 
+        writing a large GWT application following 
+        <a href="http://www.gwtproject.org/articles/mvp-architecture.html">GWT's
+        recommended MVP (Model View Presenter)</a>, if you wish, but we found
+        AngularJS to be far more elegant, and application written with AngularJS to 
+        be easier to maintain.
+      </blockquote>
+      
+      <h3>GWT offers UI Binder. Why should I write the code in HTML?</h3>
+      <blockquote>
+        This was one of the reasons why we started to work on GWT Angular. We <i>
+        wanted</i> to write the view code in HTML, <i>instead</i> of UI Binder. 
+        While we recognize that UI Binder is a powerful extension to GWT, it 
+        invents a whole new mark-up language. HTML is easy to learn, and many 
+        people coming into application development already know it. Writing the 
+        view code in HTML also means GWT Angular can be used with HTML/CSS based 
+        responsive UI frameworks, such as Twitter's 
+        <a href="http://getbootstrap.com">Bootstrap</a>, and there is a possibility
+        of integrating GWT Angular with WYSIWYG HTML editors in the future.
+      </blockquote>
+    
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div><!-- /.container -->

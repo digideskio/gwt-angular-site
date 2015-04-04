@@ -1,0 +1,23 @@
+<div data-ng-controller="com.asayama.gwt.angular.site.tutorial.client.ProjectStructureController">
+  <p>
+    Unlike a pure JavaScript project, which takes no time to get started, GWT,
+    like any other Java projects, requires some setting up to do to get started.
+    For this tutorial, we will use <a href="http://maven.apache.org/">Maven</a>
+    to manage the build and artifacts. The project will follow 
+    <a href="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">
+    Maven project structure.</a>
+  </p><p>
+    One thing we should note in this project is that the <code>webapp</code>
+    directory is under <code>src/test</code>. This is because there is really
+    nothing in that directory we need in our build output. Because this
+    application is a <i>client-only</i> application, there are not server-side
+    components to store in this directory. The <code>web.xml</code> we find here
+    is there to support Hosted Mode for testing.
+  </p><p>
+    Shown all the way at the bottom of the directory structure, you will find a
+    file named <code>pom.xml</code>. This is a Maven project descriptor. You
+    will find more information about in the next chapter, 
+    <a href="#!tutorial?page=projectObjectModel">Project Object Model</a>.
+  </p>
+  <img class="img-rounded" src="{{ PROJECT_STRUCTURE_IMAGE }}">
+</div>

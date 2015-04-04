@@ -1,0 +1,70 @@
+<div>
+  <p>
+    GWT Angular allows the users to write the <i>filter</i> code in Java.
+    In this example, we write a <code>ReverseFilter</code>, which takes a
+    string, and simply reverses the order so that the entire string appears
+    backwards. It is important to note that this filter does not modify the
+    underlying model. The original string remains "as is" while the filter
+    only formats the string on the screen.
+  </p>
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="'CustomFilterExample.html'"></div>
+  </div>
+
+  <h2>Filter</h2>
+  <p>
+    In order to define your own filter, you must extend an abstract class named
+    <code>AbstractFilter</code> and provide an implementation for the method
+    <code>filter(String)</code>. The argument is the original model, and the
+    returned string is the formatted string that appears on the screen.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/filter/Reverse.java'"></pre>
+  <p>
+    When you create a custom filter, such as ReverseFilter, you must register 
+    it with your module. In this example, we let the GWT Angular figure out the
+    name for this filter. By default, the filter name is the same as the class
+    name, except that the first letter is not capitalized, i.e. "Reverse" 
+    becomes "reverse".
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/CustomFilterExample.java'"></pre>
+
+  <h2>View</h2>
+  <p>
+    Using this filter in the view is easy. You can simply use the broken pipe
+    <code>|</code> between the model and the filter (where model in this 
+    example is returned by <code>getCaption()</code> and the custom filter, of
+    course, being the <code>reverse</code>. The filter should be place to the
+    right of the model you wish to process.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/CustomFilterExample.html'"></pre>
+  <p>
+    Note that the use of filter does not alter the state of the underlying 
+    model. In another words, if you inspect the value of the <code>caption</code>
+    variable in the controller after the filter is evaluated in the view, the
+    model will still show "Hello, World!", and not the "!dlroW ,olleH".
+  </p>
+  
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/CustomFilterExample.gwt.xml'"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+  &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/CustomFilter">
+    {{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/CustomFilter</a>
+  </p>
+
+</div>

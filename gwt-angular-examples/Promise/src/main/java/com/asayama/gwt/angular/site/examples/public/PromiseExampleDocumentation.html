@@ -1,0 +1,141 @@
+<div>
+  <p>
+    GWT Angular supports promise pattern via Java wrapper around AngularJS's
+    promise framework, which is inspired by <a href="https://github.com/kriskowal/q">
+    Kris Kowal's Q</a>.
+  </p><p>
+    The below example demonstrates how two asynchronous calls are coordinated
+    by a third, which depends on the outcome of the first two. Promise pattern
+    makes it easy to establish pipelines of asynchronous calls without having to
+    write a complex sequence of nested callbacks.
+  </p><p>
+    When you click the "Go" button below, first, the user is warned that he must
+    wait for 1 second to see the outcome of his action. The user's action kicks
+    off two asynchronous calls, one generates the salutation, "Hello", and the
+    other generates the name, "World". These two asynchronous calls take 
+    different amount of time to complete. There is a third call, which takes the
+    results of salutation and name, and formats a greeting. The greeting message
+    is then displayed to the screen.
+  </p>
+  
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="'PromiseExample.html'"></div>
+  </div>
+  
+  <h2>View</h2>
+  <p>
+    The view code is straight forward, and has no knowledge of controller's 
+    implementation and its asynchronous nature. It assumes that the greeting
+    data is or will be provided, hence it calls <code>{{ getGreeting }}</code>
+    method on the controller to obtain the value to print to the screen.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/PromiseExample.html'"></pre>
+
+  <h2>Controller</h2>
+  <p>
+    Controller takes no action onload, but when the user clicks the "Go" button,
+    it invokes <code>onClickGo()</code> method. This method first updates the
+    greeting caption on screen, letting the user know that the loading of the
+    data is in progress. Then the method goes on to invoke the <code>getGreeting()
+    </code> method of <code>GreetingService</code> object.
+  </p><p>
+    This service object is something we wrote for the purpose of demonstrating
+    the promise pattern in GWT Angular. We will look at the implementation of
+    this service class shortly, but for now, we'll focus on the handling of
+    the <code>Promise&lt;String&gt;</code> object returned by this service call.
+  </p><p>
+    The returned object is a promise that, when the promised value is ready, it
+    would invoke the callback object that you register with this promise object.
+    In this case, what it promises is that the object of type <code>String</code>
+    will be returned, signifying the greeting value.
+  </p><p>
+    We pass three different callback to this promise. First callback we pass is
+    the <code>Done</code> object. This object receives the greeting value, and
+    updates the screen caption with this value. The second callback is <code>
+    Notify</code> object, which listens to the progress of asynchronous calls
+    and updates the screen to let the user know of the progress. The third 
+    callback is the <code>Fail</code>, which displays an error message on the
+    screen if and when the promise fails to deliver the value.
+  </p><p>
+    In short, the controller merely knows how to consume the promise value, if
+    and when it is delivered. It does not know any details about how the values
+    are obtained.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/PromiseExampleController.java'"></pre>
+
+  <h2>Service</h2>    
+  <p>
+    <code>GreetingService</code> is the code that handles the complexity of
+    asynchronously loading the necessary data from the back-end. In this 
+    example, we decided to simulate asynchronous loading of the data rather than
+    actually setting up live web services. This is because we wanted to focus
+    on the promise and resolution of the values in the browser, and did not
+    want to distract you with the design and implementation of web service code.
+  </p><p>
+    There are three public methods in this service, <code>getGreeting()</code>,
+    which you have already seen being called from the controller, and two others,
+    <code>getName()</code> and <code>getSalutation()</code>. All three public
+    methods return an object of type <code>Promise</code>.
+  </p><p>
+    <code>getSalutation()</code> method simulates an asynchronous call by using
+    a <code>Timer</code> class in GWT. It schedule a job to run in 1 second,
+    which returns a string value "Hello" by calling the <code>resolve()</code>
+    method on the <code>Deferred</code> object obtained from <code>Q</code>.
+  </p><p>
+    <code>getName()</code> method also simulates an asynchronous call by using
+    a <code>Timer</code> class in GWT. It schedule a job to run in 0.5 seconds,
+    which returns a string value "World" by calling the <code>resolve()</code>
+    method on the <code>Deferred</code> object obtained from <code>Q</code>.
+  </p><p>
+    Note that neither of the <code>getSalutaion()</code> or <code>getName()</code>
+    methods are blocking, in a sense that the caller does not have to wait for
+    these promised string values to become available. They simply return the 
+    <code>Promise</code> values, so that the caller can later retrieve these
+    values whenever they become available.
+  </p><p>
+    You may recall that the controller for this demo does not call these two
+    service methods we have so far talked about, but the controller calls the
+    <code>getGreeting()</code> method. Let's take a look at it now.
+  </p><p>
+    <code>getGreeting()</code> method uses <code>q.all()</code> service method
+    of type <code>Q</code>, which is injected by AngularJS into our custom
+    service class. This method allows the parallel execution of promises, and
+    returns another single promise to be resolved when all promises are ready.
+  </p><p>
+    The concept of parallel execution is rather important. If we had executed
+    these three asynchronous calls in series, then the execution time of the 
+    entire pipeline would have been 1.5 seconds. But because we execute them
+    in parallel, we can execute them in 1 second, which is the slower of the
+    two promises that the <code>getGreeting()</code> depends on.
+  </p><p>
+    The purpose of <code>getGreeting()</code> method is to construct a new 
+    greeting object, given the values of salutation and name. It knows how to
+    construct this new value, but it does not have to know anything about how
+    these values are loaded.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/service/GreetingService.java'"></pre>
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/PromiseExample.gwt.xml'"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-ng&lt;/artifactId&gt;
+  &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/Promise">
+    {{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/Promise</a>
+  </p>
+
+</div>

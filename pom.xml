@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.asayama.docs.gwt.angular</groupId>
   <artifactId>gwt-angular-site</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>pom</packaging>
 
   <name>gwt-angular-site</name>
@@ -38,8 +38,9 @@
     <connection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</connection>
     <url>scm:git:git@github.com:kyoken74/gwt-angular-site.git</url>
     <developerConnection>scm:git:git@github.com:kyoken74/gwt-angular-site.git</developerConnection>
-    <tag>1.0.1</tag>
+    <tag>1.0.2</tag>
   </scm>
+  
   <developers>
     <developer>
       <id>kyoken74</id>
@@ -53,7 +54,7 @@
     <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gwt.version>2.7.0</gwt.version>
-    <gwt-angular.version>0.2.1</gwt-angular.version>
+    <gwt-angular.version>0.2.3</gwt-angular.version>
   </properties>
 
   <build>
@@ -97,6 +98,11 @@
               <version>1.9.2</version>
             </dependency>
           </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.7</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -223,22 +229,22 @@
       <dependency>
         <groupId>com.asayama.docs.gwt.angular.examples</groupId>
         <artifactId>gwt-angular-examples</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-pages</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-web</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.docs.gwt.angular</groupId>
         <artifactId>gwt-angular-tutorial</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
       </dependency>
       
       <!-- gwt-angular -->
@@ -292,17 +298,17 @@
       <dependency>
         <groupId>com.asayama.gwt.jquery</groupId>
         <artifactId>gwt-jquery</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.gwt.bootstrap</groupId>
         <artifactId>gwt-bootstrap</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3</version>
       </dependency>
       <dependency>
         <groupId>com.asayama.gwt.fa</groupId>
         <artifactId>gwt-font-awesome</artifactId>
-        <version>0.1.2</version>
+        <version>0.1.3</version>
       </dependency>
 
       <!-- gwt -->

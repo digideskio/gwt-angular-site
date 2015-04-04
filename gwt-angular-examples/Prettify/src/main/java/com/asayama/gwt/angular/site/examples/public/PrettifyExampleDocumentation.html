@@ -1,0 +1,70 @@
+<div>
+  <p>
+    gwt-angular-prettify offers <a target="https://code.google.com/p/google-code-prettify/"
+    href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a> 
+    inside your GWT Angular code.
+  </p>
+  <div class="panel panel-primary">
+    <div class="panel-body" data-ng-include="'PrettifyExample.html'"></div>
+  </div>
+  
+  <h2>View</h2>
+  <p>
+    There are two ways you can make use of gwtPrettify directive, either as an
+    attribute directive, or as a class directive.
+  </p><p>
+    If you have a fairly small code, or a piece of code that is not intended
+    for compilation but simply for documentation, consider using the class 
+    directive. The class directive allows you to inline your code snippet inside
+    your <code>&lt;PRE&gt;</code>. You will have to escape any occurrence of
+    characters that may conflict with HTML parsing and rendering, of course.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/PrettifyExample.html'"></pre>
+  
+  <h2>Controller</h2>
+  <p>
+    If you have a fairly large code snippet, consider using the attribute
+    directive. <code>data-gwt-prettify</code> directive takes a single argument,
+    which is either a <code>TextResource</code> or <code>String</code>. You can
+    define your <code>TextResource</code> as you would normally do with your GWT
+    applications. Otherwise, pass a <code>String</code> argument of value 
+    filename (much like ngInclude directive).
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/PrettifyExampleController.java'"></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Configuration</h2>
+  <p>
+    The following modules are required in the gwt.xml.
+  </p>
+  <pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/PrettifyExample.gwt.xml'"></pre>
+
+  <p>
+    The following Maven dependencies are required in the pom.xml.
+  </p>
+  <pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-prettify&lt;/artifactId&gt;
+  &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+  <p>
+    You can also browse the full source code on Github.
+  </p><p>
+    <a href="{{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/Prettify">
+    {{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/Prettify</a>
+  </p>
+
+</div>
