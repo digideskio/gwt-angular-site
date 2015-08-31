@@ -139,6 +139,12 @@
     </dependency>
     <dependency>
       <groupId>com.asayama.docs.gwt.angular.examples</groupId>
+      <artifactId>ServiceInjection</artifactId>
+      <version>1.0.3-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.asayama.docs.gwt.angular.examples</groupId>
       <artifactId>TextInput</artifactId>
       <version>1.0.3-SNAPSHOT</version>
       <scope>provided</scope>

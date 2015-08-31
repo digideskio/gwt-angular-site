@@ -1,0 +1,10 @@
+[{
+	"language" : "English",
+	"greeting" : "Hello"
+},{
+	"language" : "Spanish",
+	"greeting" : "Hola"
+},{
+	"language" : "Japanese",
+	"greeting" : "こんにちは"
+}]
