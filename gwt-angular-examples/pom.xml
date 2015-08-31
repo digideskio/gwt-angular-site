@@ -26,6 +26,7 @@
     <module>OnClickEvent</module>
     <module>Prettify</module>
     <module>Promise</module>
+    <module>ServiceInjection</module>
     <module>TextInput</module>
     <module>UrlHashParameter</module>
   </modules>

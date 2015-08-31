@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>ServiceInjection</artifactId>
+  <packaging>jar</packaging>
+  <parent>
+    <groupId>com.asayama.docs.gwt.angular.examples</groupId>
+    <artifactId>gwt-angular-examples</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <name>gwt-angular-examples ServiceInjection</name>
+  <description>
+    An example GWT Angular module demonstrating the use of Service Injection.
+  </description>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-source</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/com/asayama/gwt/angular/site/examples/public/src/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.asayama.gwt.angular</groupId>
+      <artifactId>gwt-angular-http</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

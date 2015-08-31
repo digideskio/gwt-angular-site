@@ -1,0 +1,75 @@
+<p>
+  Among many things that Angular offers, dependency injection is perhaps one of
+  the more important features. In this example, we demonstrate how to inject
+  one service (provided by GWT Angular) into another service (a custom service).
+  By allowing Angular to manage the injection, the timing of instantiation of
+  the object is left up to the framework to manage. This means that these
+  service objects are not created until you actually request them (i.e. lazy
+  loading).
+</p>
+<div class="panel panel-primary">
+  <div class="panel-body" data-ng-include="'ServiceInjectionExample.html'"></div>
+</div>
+<h2>Custom Service</h2>
+<p>
+  We define a custom service named MyService. This service depends on another
+  service, named HttpClient. By wrapping the HttpClient into our own service,
+  we can hide the complexity of data deserialization as well as error handling
+  in one place (i.e. MyService) so that the callers do not have to worry about
+  such details.
+</p>
+<pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/MyService.java'"></pre>
+<p>
+  As you can see, in order to inject a service into another service, we merely
+  need to declare it as an instance member of the custom service class, and
+  annotate it with @Injector.Inject.
+</p>
+<h2>Service Registration in the Module</h2>
+<p>
+  Once we have our service defined, we must not forget to register this in our
+  module, so that Angular knows to manage its life cycle.
+</p>
+<pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/ServiceInjectionExample.java'"></pre>
+<p>
+  You might be wondering why we need to register our custom service, MyService,
+  but not the HttpClient. This is because HttpClient is managed by another
+  module, com.asayama.gwt.angular.http.HTTP (see Configuration section below).
+  If you are injecting a custom service into another custom service, both of
+  which are defined in your own module, of course you have to register both of
+  them in your module's onModuleLoad() method. In this example, however, we are
+  injecting a service provided by GWT Angular (HttpClient) into a custom service
+  defined in this example module. We only need to register the latter.
+</p>
+<h2>Configuration</h2>
+<p>
+  The following modules are required in the gwt.xml. Note that HttpClient
+  service is provided by and register in a module named
+  com.asayama.gwt.angular.http.HTTP, which you see in the inherits statement
+  below.
+</p>
+<pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/ServiceInjectionExample.gwt.xml'"></pre>
+<h2>Controller and View</h2>
+<p>
+  For reference, we show the controller and view components needed for this
+  example below. They do not directly play any roles in the injection of service
+  into another service (the point of this example), but they are provided here
+  for completeness.
+</p>
+<pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/client/ServiceInjectionExampleController.java'"></pre>
+<pre data-gwt-prettify="'src/main/java/com/asayama/gwt/angular/site/examples/public/ServiceInjectionExample.html'"></pre>
+<p>
+  The following Maven dependencies are required in the pom.xml.
+</p>
+<pre class="prettyprint">
+&lt;dependency&gt;
+  &lt;groupId&gt;com.asayama.gwt&lt;/groupId&gt;
+  &lt;artifactId&gt;gwt-angular-http&lt;/artifactId&gt;
+  &lt;version&gt;{{ GWT_ANGULAR_VERSION }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+
+<p>
+  You can also browse the full source code on Github.
+</p><p>
+  <a href="{{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/ServiceInjection">
+  {{ GITHUB_GWT_ANGULAR_EXAMPLES_URL }}/blob/master/gwt-angular-examples/ServiceInjection</a>
+</p>

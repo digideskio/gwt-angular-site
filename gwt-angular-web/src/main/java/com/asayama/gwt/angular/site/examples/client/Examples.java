@@ -24,6 +24,7 @@ public class Examples extends AbstractModule implements EntryPoint {
         pages.add(Page.create("URL Hash Parameter", "urlHashParameter", "UrlHashParameterExampleDocumentation.html"));
         pages.add(Page.create("HTTP Client", "httpClient", "HttpClientExampleDocumentation.html"));
 //        pages.add(Page.create("GWT Widgets", "gwtWidgets", "GwtWidgetsExampleDocumentation.html"));
+        pages.add(Page.create("Service Injection", "serviceInjection", "ServiceInjectionExampleDocumentation.html"));
         pages.add(Page.create("Prettify", "prettify", "PrettifyExampleDocumentation.html"));
        return pages;
     }
